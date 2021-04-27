@@ -152,7 +152,7 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 .text-extra-light-gray, .btn-link.text-extra-light-gray, a.text-extra-light-gray-hover:hover { color:#b7b7b7; }
 .text-light-gray, .btn-link.text-light-gray, a.text-light-gray-hover:hover { color:#d6d5d5; }
 .text-very-light-gray, .btn-link.text-very-light-gray, a.text-very-light-gray-hover:hover { color:#ededed; }
-.text-fast-blue, .btn-link.text-fast-blue, a.text-fast-blue-hover:hover { color: #0038e3; }
+.text-fast-blue, .btn-link.text-fast-blue, a.text-fast-blue-hover:hover { color: #efa63f; }
 .text-neon-blue, .btn-link.text-neon-blue, a.text-neon-blue-hover:hover { color: #3452ff; }
 .text-light-pink, .btn-link.text-light-pink, a.text-light-pink-hover:hover { color: #f18c8c; }
 .text-red, .btn-link.text-red, a.text-red-hover:hover { color: #fe0127; }
@@ -214,9 +214,9 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 .text-gradient-magenta-orange-2 { background: linear-gradient(to right, #ec606c, #ee6362, #ee6757, #ed6c4d, #eb7242); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .text-gradient-purple-magenta { background: linear-gradient(to right, #502970, #502970, #ac2775, #d42d6b, #f34259); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .text-gradient-light-purple-light-orange { background: linear-gradient(to right, #b783ff, #b783ff, #fa7cc1, #ff85a6, #ff9393); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.text-gradient-sky-blue-pink { background: linear-gradient(to right, #556fff, #556fff, #e05fc4, #f767a6, #ff798e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.text-gradient-sky-blue-pink { color: #efa63f }
 .text-gradient-sky-blue-dark-pink { background: linear-gradient(to right, #5065da, #556fff, #c557ad, #e65f9a, #e66176); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.text-gradient-sky-blue-pink-2 { background: linear-gradient(to right top, #6670ed, #556fff, #d45eba, #f767a6, #f5667d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.text-gradient-sky-blue-pink-2 { color: #efa63f}
 .text-gradient-peacock-blue-crome-yellow { background: linear-gradient(to right, #36c1e1, #36c1e1, #74cf8e, #bac962, #feb95b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .text-gradient-peacock-blue-crome-yellow-2 { background-image: linear-gradient(to right, #5cc088, #50c28d, #83b879, #c9a95e, #dda556);; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .text-gradient-fast-blue-purple { background: linear-gradient(to right, #0039e3, #0039e3, #5e28dd, #741bd9, #8600d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -371,7 +371,7 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 .bg-light-gray { background-color:#f7f7f7; }
 .bg-bright-red { background-color: #98272a; }
 .bg-fast-blue { background-color: #0038e3; }
-.bg-neon-blue { background-color: #3452ff; }
+.bg-neon-blue { background-color: #efa63f; }
 .bg-transparent { background-color: transparent; }
 .bg-sky-blue { background-color: #2e94eb; }
 .bg-green { background-color: #27ae60; }
@@ -460,7 +460,8 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 .bg-gradient-light-purple-light-orange { background-image: linear-gradient(to right top, #b783ff, #e37be0, #fa7cc1, #ff85a6, #ff9393); }
 .bg-gradient-sky-blue-pink { background-image: linear-gradient(to right top, #556fff, #b263e4, #e05fc4, #f767a6, #ff798e); }
 .bg-gradient-peacock-blue-crome-yellow { background-image: linear-gradient(to right top, #36c1e1, #28ccc0, #74cf8e, #bac962, #feb95b); }
-.bg-gradient-fast-blue-purple { background-image: linear-gradient(to right top, #0039e3, #4132e0, #5e28dd, #741bd9, #8600d4); }
+.bg-gradient-fast-blue-purple { background-image: linear-gradient(to right top, #efa63f, #efa63f, #efa63f, #efa63f, #efa63f); }
+.bg-gradient-fast-blue-purple-see { background-image: linear-gradient(to right top, #efa63f, #efa63f, #efa63f, #efa63f, #efa63f); }
 .bg-gradient-orange-pink { background-image: linear-gradient(to right top, #ff6557, #ff5a5f, #ff4e68, #ff4271, #ff367c); }
 .bg-gradient-light-orange-light-pink {background-image: linear-gradient(to right top, #f5bb8d, #feb399, #ffaea8, #fdaab9, #f3aaca);}
 .bg-gradient-white-light-gray { background-image: linear-gradient(to bottom, #ffffff, #fdfdfd, #fbfbfb, #f9f9f9, #f7f7f7); }
@@ -846,8 +847,9 @@ input.btn:focus { border-width: 2px; }
 .btn-gradient-magenta-orange { background-image: linear-gradient(to right, #e42564, #fa6259, #e42564); color: #fff; background-size: 200% auto; transition: all 0.3s cubic-bezier(.25,.8,.25,1); }
 .btn-gradient-magenta-orange-2 { background-image: linear-gradient(to right, #ec606c, #eb7242, #ec606c); color: #fff; background-size: 200% auto; transition: all 0.3s cubic-bezier(.25,.8,.25,1); }
 .btn-gradient-purple-magenta { background: linear-gradient(to right, #502970, #f34259, #502970); color: #fff; background-size: 200% auto; transition: all 0.3s cubic-bezier(.25,.8,.25,1); }
-.btn-gradient-light-purple-light-orange { background-image: linear-gradient(to right, #b884fd, #fe73a8, #b884fd); color: #fff; background-size: 200% auto; transition: all 0.3s cubic-bezier(.25,.8,.25,1); }
-.btn-gradient-sky-blue-pink { background: linear-gradient(to right, #556fff, #ff798e, #556fff); color: #fff; background-size: 200% auto; transition: all 0.3s cubic-bezier(.25,.8,.25,1); }
+.btn-gradient-light-purple-light-orange { background: black };
+.btn-gradient-sky-blue-pink { background: #efa63f; color: white; }
+.btn-gradient-sky-blue-pink-black { background: #efa63f; color: white; }
 .btn-gradient-peacock-blue-crome-yellow { background: linear-gradient(to right, #36c1e1, #feb95b, #36c1e1); color: #fff; background-size: 200% auto; transition: all 0.3s cubic-bezier(.25,.8,.25,1); }
 .btn-gradient-fast-blue-purple { background: linear-gradient(to right, #0039e3, #8600d4, #0039e3); color: #fff; background-size: 200% auto; transition: all 0.3s cubic-bezier(.25,.8,.25,1); }
 .btn-gradient-tan-geraldine { background-image: linear-gradient(to right, #fe8182,  #f8a380, #fe8182); color: #fff; background-size: 200% auto; transition: all 0.3s cubic-bezier(.25,.8,.25,1); }
