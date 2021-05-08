@@ -7989,10 +7989,13 @@
 @media (max-height: 460px) {
     /* header search */
     .active-form .form-wrapper .search-form { height: 85vh; }
+   
+    
 }
 
 @media (max-height: 600px) {
     /* modern menu */
+
     [data-mobile-nav-style=modern] .navbar-modern-inner .navbar-collapse { padding-top: 30px; padding-bottom: 30px; }
 
     /* full menu */

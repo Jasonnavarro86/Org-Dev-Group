@@ -105,7 +105,7 @@ button, button:focus, button:hover { outline: none; }
 .transition { transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; }
 
 
-.coming-soon-logo { width: 200; }
+.coming-soon-logo { width: 200px; }
 /* ===================================
     03. Typography
 ====================================== */
@@ -4862,9 +4862,10 @@ input[type="checkbox"].error { box-shadow: 0px 0px 0px 1px rgb(255 0 0), 1px 1px
     
 }
 
-@media (min-width: 490px) {
+@media (max-width: 590px) {
     .coming-soon-logo{
-        width: 200px;
+        width: 120px;
+        height: 100px;
     }
 }
 
