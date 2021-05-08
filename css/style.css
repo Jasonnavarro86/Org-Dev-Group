@@ -104,6 +104,8 @@ button, button:focus, button:hover { outline: none; }
 .no-transition { transition: all 0s ease-in-out !important; -moz-transition: all 0s ease-in-out !important; -webkit-transition: all 0s ease-in-out !important; -ms-transition: all 0s ease-in-out !important; -o-transition: all 0s ease-in-out !important; }
 .transition { transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; }
 
+
+.coming-soon-logo { width: 200; }
 /* ===================================
     03. Typography
 ====================================== */
@@ -509,6 +511,7 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 /* ===================================
     05. Custom
 ====================================== */
+
 
 section { padding: 130px 0; overflow: hidden; }
 section.big-section { padding:160px 0; }
@@ -4857,6 +4860,12 @@ input[type="checkbox"].error { box-shadow: 0px 0px 0px 1px rgb(255 0 0), 1px 1px
     .tab-style-01 .nav-tabs > li.nav-item > a.nav-link:hover +.tab-border { opacity: 1; width: 100%; visibility: visible; }
     .parallax, .fix-background {background-position: top center !important; background-attachment: inherit !important;}
     
+}
+
+@media (min-width: 490px) {
+    .coming-soon-logo{
+        width: 200px;
+    }
 }
 
 /* for retina */
