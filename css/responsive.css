@@ -6375,6 +6375,9 @@
 }
 
 @media screen and (max-width: 575px) {
+    .mobil-orgdev-logo {
+        width : 120px;
+    }
     /* reset */
     section.big-section { padding:50px 0; }
     .xs-last-order { order: 10; }
