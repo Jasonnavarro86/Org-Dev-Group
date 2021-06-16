@@ -2976,7 +2976,8 @@
     .navbar.navbar-light .navbar-nav > .nav-item.dropdown.megamenu:hover > a, .navbar.navbar-light .navbar-nav > .nav-item.dropdown.simple-dropdown:hover > a, .sticky .navbar.navbar-dark.header-light .navbar-nav > .nav-item.dropdown.megamenu:hover > a, .sticky .navbar.navbar-dark.header-light .navbar-nav > .nav-item.dropdown.simple-dropdown:hover > a { color: rgba(0,0,0,1) !important; }
 
     /* header logo */
-    header .navbar .navbar-brand .default-logo, header.sticky .navbar-brand .alt-logo, header.sticky .navbar .navbar-brand .default-logo, header .navbar-brand .alt-logo, header .sidebar-nav-menu .navbar-brand .default-logo { visibility: hidden; opacity: 0; width: 0; }
+    /* header .navbar .navbar-brand .default-logo, header.sticky .navbar-brand .alt-logo, header.sticky .navbar .navbar-brand .default-logo, header .navbar-brand .alt-logo, header .sidebar-nav-menu .navbar-brand .default-logo { visibility: hidden; opacity: 0; width: 0; } */
+        header .navbar .navbar-brand .default-logo, header.sticky .navbar-brand .alt-logo, header.sticky .navbar .navbar-brand .default-logo, header .navbar-brand .alt-logo, header .sidebar-nav-menu .navbar-brand .default-logo { width: 10; }
     header .navbar .navbar-brand .mobile-logo, header .sidebar-nav-menu .navbar-brand .mobile-logo  { visibility: visible; opacity: 1; width: auto; }
 
     /* header with top logo */
