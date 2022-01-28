@@ -2636,6 +2636,8 @@ button.mfp-close,.mfp-image-holder button.mfp-close, .mfp-iframe-holder button.m
 .navbar { padding: 0; }
 .navbar.navbar-boxed { padding-left: 35px; padding-right: 35px; }
 .navbar-brand { margin-right: 0; font-size: 0; }
+.odg-brand { margin-right: 0; font-size: 0; }
+.odg-log-img { max-width: 120px !important }
 .dropdown.open>.dropdown-menu { display: block; }
 .header-social-icon a > i { padding: 0px 10px; font-size: 14px; vertical-align: middle; }
 .header-cart-icon a > i, .header-cart-icon a > i, .header-language a > i, .header-search-icon a > i, .header-push-button a > i { padding: 30px 0; display: inline-block; }
@@ -2662,7 +2664,7 @@ header nav.navbar.navbar-static-overlay { position: absolute; width: 100%; }
 .menu-logo-center .menu-logo { position: absolute; left: 0; right: 0; margin: 0 auto; text-align: center; }
 .navbar-left, .navbar-right { width: 40%; }
 .menu-logo-center .navbar-brand { position: relative; z-index: 1; padding: 22px 0;}
-
+.odg-brand { position: relative; z-index: 1; padding: 22px 0;}
 /* header with topbar */
 header .top-bar { position: fixed; top: 0; width: 100%; z-index: 1031; -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s; }
 header .top-bar + .navbar.fixed-top { top: 48px; -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s; }
@@ -2673,6 +2675,7 @@ header.sticky .top-bar + .navbar.fixed-top { top: 0px; -webkit-transition-durati
 
 /* header responsive sticky */
 header.sticky .navbar.responsive-sticky .navbar-brand img { max-height: 32px; }
+header.sticky .odg-brand img { max-height: 32px; }
 .sticky .navbar.responsive-sticky .navbar-nav .nav-link { padding: 18px 0; }
 .sticky .navbar.responsive-sticky .header-cart-icon a > i, .sticky .navbar.responsive-sticky .header-cart-icon a > i, .sticky .navbar.responsive-sticky .header-language a > i, .sticky .navbar.responsive-sticky .header-search-icon a > i, .sticky .navbar.responsive-sticky .header-push-button a > i{ padding: 20px 0; }
 .navbar.responsive-sticky .header-cart-icon a, .navbar.responsive-sticky .header-cart-icon a, .navbar.responsive-sticky .header-language a, .navbar.responsive-sticky .header-search-icon a, .navbar.responsive-sticky .header-push-button a { transition: none; -moz-transition: none; -webkit-transition: none; -ms-transition: none; -o-transition: none; }
