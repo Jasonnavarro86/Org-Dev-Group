@@ -2076,5 +2076,56 @@
             });
         }
     }
+
+  $( '#onFormSubmit' ).on( 'click', function () {
+      
+      const YourData = {
+          'comapny': $("#formName").val(),
+          'zip': $("#formZip").val(),
+          'number of employees': $("#employees").val(),
+          'meeting preference': $("#session").val(),
+          'email': $("#formEmail").val(),
+          'years in business': $("#yrsInBusiness").val(),
+          'revenue size': $("#revenue").val(),
+      }
+
+      console.log(YourData)
+        if ($("#formName").val() === ""){
+                alert("Please enter the company name inorder to submit the contact form")
+                return
+         }else if ($("#formEmail").val() === ""){
+                alert("Please enter an email inorder to submit the contact form")
+                return
+         }else {
+             $( '#onFormSubmit' ).addClass( 'loading' );
+                $.ajax({
+                           url: 'https://formspree.io/f/mrgjpbgv',
+                            headers: {'Accept': 'application/json'},
+                           method: 'POST',
+                           dataType: 'json',
+                           data: YourData,
+                           success: function ( response ) {
+                                $("#formName").val("")
+                                $("#formZip").val("")
+                                $("#employees").val("")
+                                $("#session").val("")
+                                $("#formEmail").val("")
+                                $("#yrsInBusiness").val("")
+                                $("#revenue").val("")
+                                $( '#onFormSubmit' ).removeClass( 'loading' );
+                                $( '#form-results' ).removeClass( 'alert-success' ).removeClass( 'alert-danger' ).hide();
+                                $( '#form-results' ).addClass( 'alert-success' ).html( 'Your message has been sent successfully!' );
+                                $( '#form-results' ).removeClass( 'd-none' ).fadeIn( 'slow' ).delay( 4000 ).fadeOut( 'slow' );
+                        
+                           },
+                           error: function (data) {
+                                $( '#onFormSubmit' ).removeClass( 'loading' );
+                                 $( '#form-results' ).removeClass( 'alert-success' ).removeClass( 'alert-danger' ).hide();
+                               alert('Something went wrong')
+                           }
+                });
+         }
     
+    });
+       
 })( jQuery );

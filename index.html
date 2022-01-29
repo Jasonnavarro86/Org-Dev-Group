@@ -756,13 +756,13 @@
                     <h5
                         class="alt-font font-weight-600 text-extra-dark-gray margin-5-rem-bottom letter-spacing-minus-1px">
                         Get in touch with us</h5>
-                    <form action="https://formspree.io/f/mrgjpbgv" method="post">
+                    <div class="myForm">
                         <input
                             class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-25px-bottom border-radius-0px required"
-                            type="text" name="name" placeholder="Your company name" />
+                            type="text" name="name" id="formName" placeholder="Your company name" />
                             <input
                             class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-25px-bottom border-radius-0px required"
-                            type="number" name="zip" placeholder="Zip code" />
+                            type="number" name="zip" id="formZip" placeholder="Zip code" />
                         <select style="color: #a9a9a9"
                             class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-25px-bottom border-radius-0px"
                             name="employees" id="employees">
@@ -782,15 +782,15 @@
                         </select>
                         <input
                         class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-25px-bottom border-radius-0px required"
-                        type="email" name="email" placeholder="Your email address" />
+                        type="email" name="email" id="formEmail" placeholder="Your email address" />
                         <select style="color: #a9a9a9"
                             class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-25px-bottom border-radius-0px"
-                            name="session" id="session">
+                            name="yrsInBusiness" id="yrsInBusiness">
                             <option value="">Years in business?</option>
-                            <option value="0to2">0 to 2</option>
-                            <option value="3to5">3 to 5</option>
-                            <option value="6to10">6 to 10</option>
-                            <option value="11Plus">11 or More</option>
+                            <option value="0 to 2">0 to 2</option>
+                            <option value="3 to 5">3 to 5</option>
+                            <option value="6 to 10">6 to 10</option>
+                            <option value="11 Plus">11 or More</option>
                         </select>
                         <select style="color: #a9a9a9"
                         class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-25px-bottom border-radius-0px"
@@ -804,9 +804,10 @@
                         <option value="50k+">50M OR MORE</option>
                     </select>
                         <input type="hidden" name="redirect" value="">
+                        
                         <button class="btn btn-medium btn-fancy btn-gradient-light-purple-light-orange mb-0 submit"
-                            type="submit" style="color: white;">send message</button>
-                        <div class="form-results d-none"></div>
+                            type="button" style="color: white;" id="onFormSubmit">send message</button>
+                        <div class="form-results" id="form-results"></div>
                     </form>
                 </div>
             </div>
