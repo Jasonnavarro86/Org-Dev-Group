@@ -49,6 +49,8 @@
     /****** Fit videos ******/
     $( '.fit-videos' ).fitVids();
 
+    $(".copyrightYear").html(`&copy; Copyright ${new Date().getFullYear()} `)
+
     /* hamberger menu custom scrollbar */
     $( '[data-scroll-options]' ).each( function() {
         var _this           = $( this );
