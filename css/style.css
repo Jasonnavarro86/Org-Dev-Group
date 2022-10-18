@@ -159,6 +159,7 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 .text-very-light-gray, .btn-link.text-very-light-gray, a.text-very-light-gray-hover:hover { color:#ededed; }
 .text-fast-blue, .btn-link.text-fast-blue, a.text-fast-blue-hover:hover { color: #efa63f; }
 .text-neon-blue, .btn-link.text-neon-blue, a.text-neon-blue-hover:hover { color: #3452ff; }
+.text-linkedin-blue, .btn-link.text-linkedin-blue, a.text-linkedin-blue-hover:hover { color: #0072b1; }
 .text-light-pink, .btn-link.text-light-pink, a.text-light-pink-hover:hover { color: #f18c8c; }
 .text-red, .btn-link.text-red, a.text-red-hover:hover { color: #fe0127; }
 .text-dark-red, .btn-link.text-dark-red, a.text-dark-red-hover:hover { color: #d23134; }
