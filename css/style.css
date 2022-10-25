@@ -223,6 +223,7 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 .text-gradient-sky-blue-pink { color: #efa63f }
 .text-gradient-sky-blue-dark-pink { background: linear-gradient(to right, #5065da, #556fff, #c557ad, #e65f9a, #e66176); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .text-gradient-sky-blue-pink-2 { color: #efa63f}
+.text-gradient-org-dev { background: linear-gradient(218deg, rgba(255,159,81,1) 0%, rgba(239,166,63,1) 100%)}
 .text-gradient-peacock-blue-crome-yellow { background: linear-gradient(to right, #36c1e1, #36c1e1, #74cf8e, #bac962, #feb95b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .text-gradient-peacock-blue-crome-yellow-2 { background-image: linear-gradient(to right, #5cc088, #50c28d, #83b879, #c9a95e, #dda556);; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .text-gradient-fast-blue-purple { background: linear-gradient(to right, #0039e3, #0039e3, #5e28dd, #741bd9, #8600d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
