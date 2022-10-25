@@ -69,6 +69,7 @@ video { background-size: cover; display: table-cell; vertical-align: middle; wid
 p { margin: 0 0 25px; }
 b, strong { font-weight: 600; }
 .alt-font strong { font-weight: 600; }
+.alt-font2 { font-weight: 600; font-size: 28px; color: #828282;}
 .last-paragraph-no-margin p:last-of-type { margin-bottom:0; }
 ul, ol, dl { list-style-position: outside; margin-bottom: 25px; }
 ul { margin: 0; padding: 0; }
@@ -517,6 +518,15 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 /* ===================================
     05. Custom
 ====================================== */
+
+.mt-25{
+    margin-top: 160px;
+}
+
+.subheaderh6{
+    font-size: 21px;
+}
+
 #contactForm{
     margin-top: -100px !important;
 }
@@ -2265,10 +2275,18 @@ input.btn:focus { border-width: 2px; }
 .w-95 { width: 95%; }
 .w-100 { width: 100%; }
 .w-auto { width:auto; }
+@media (max-width: 991px) {
+  
+    .mt-25{
+       display: none;
+    }
+   
+}
 @media (max-width: 530px) {
     #contactForm{
         margin-top: 0px !important;
     }
+  
     .w-57.mobil-45-45 { width: 35%; }
 }
 /* ===================================

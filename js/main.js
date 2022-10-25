@@ -76,31 +76,37 @@
     ) {
       alert("Please fill out entire form")
     } else {
+        var assessmentAnswers = { 
+            "employees": employees, 
+            "revenue": revenue,
+            "typeOfBusiness": typeOfBusiness,
+            "yrsInBusiness": yrsInBusiness,
+            "seniorLeaders": seniorLeaders,
+            "frontlineLeaders": frontlineLeaders,
+            "departments": departments
+        };
+        localStorage.setItem('assessmentAnswers', JSON.stringify(assessmentAnswers))
       switch (employees) {
-        case "micro":
-            window.location.href = `./result-${employees}.html`
+        case "1-4":
+            window.location.href = `./result-micro.html`
           break
-        case "sm":
-            window.location.href = `./result-${employees}.html`
+        case "5-200":
+            window.location.href = `./result-sm.html`
           break
-        case "med":
-            window.location.href = `./result-${employees}.html`
+        case "201-1000":
+            window.location.href = `./result-med.html`
           break
-        case "lg":
-            window.location.href = `./result-${employees}.html`
+        case "1001-2000":
+            window.location.href = `./result-lg.html`
+          break
+          case "2001+":
+            window.location.href = `./result-lg.html`
           break
 
         default:
           break
       }
     }
-    console.log("employees", employees)
-    console.log("revenue", revenue)
-    console.log("typeOfBusiness", typeOfBusiness)
-    console.log("yrsInBusiness", yrsInBusiness)
-    console.log("seniorLeaders", seniorLeaders)
-    console.log("frontlineLeaders", frontlineLeaders)
-    console.log("departments", departments)
   })
 
   /* hamberger menu custom scrollbar */
@@ -2544,13 +2550,12 @@
   })
 
   $("#onForm2Submit").on("click", function () {
-    const YourData = {
-      comapny: $("#compName").val(),
-      zip: $("#compZip").val(),
-      "meeting preference": $("#compSession").val(),
-      email: $("#compEmail").val(),
-      
-    }
+    const retrievedAssessmentAnswers = localStorage.getItem('assessmentAnswers');
+    const myData = JSON.parse(retrievedAssessmentAnswers)
+    myData["comapny"] = $("#compName").val();
+    myData["zip"] = $("#compZip").val();
+    myData["meeting preference"] = $("#compSession").val();
+    myData["email"] = $("#compEmail").val();
 
     if ($("#compName").val() === "") {
       alert("Please enter the company name inorder to submit the contact form")
@@ -2565,7 +2570,7 @@
         headers: { Accept: "application/json" },
         method: "POST",
         dataType: "json",
-        data: YourData,
+        data: myData,
         success: function (response) {
           $("#compName").val("")
           $("#compZip").val("")
