@@ -247,7 +247,7 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 
 /* text stroke color */
 .text-border-color-black { -webkit-text-stroke-color: #000000; }
-
+.text-border-color-yellow { -webkit-text-stroke-color: #f0a640; color: #f0a640}
 /* letter spacing */
 .letter-spacing-1-half { letter-spacing: 0.50px; }
 .letter-spacing-1px { letter-spacing: 1px; }
@@ -515,7 +515,46 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 /* ===================================
     05. Custom
 ====================================== */
-
+#contactForm{
+    margin-top: -100px !important;
+}
+.customslidecontainer {
+    width: 100%;
+  }
+  
+  .customslider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .customslider:hover {
+    opacity: 1;
+  }
+  
+  .customslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
 
 section { padding: 130px 0; overflow: hidden; }
 section.big-section { padding:160px 0; }
@@ -2225,6 +2264,9 @@ input.btn:focus { border-width: 2px; }
 .w-100 { width: 100%; }
 .w-auto { width:auto; }
 @media (max-width: 530px) {
+    #contactForm{
+        margin-top: 0px !important;
+    }
     .w-57.mobil-45-45 { width: 35%; }
 }
 /* ===================================
@@ -4062,6 +4104,12 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .list-style-08 li:last-child { padding-bottom: 0; }
 .list-style-08 li .label-new, .list-style-08 li .label-hot { background-color: #70a967; display: inline-block; vertical-align: middle; padding: 2px 9px; font-size: 10px; line-height: 15px; color: #fff; text-transform: uppercase; margin-left: 10px; border-radius: 1px; }
 .list-style-08 li .label-hot { background-color: #d74a3a; }
+
+/* list style 09 */
+.list-style-09 { list-style: none; }
+.list-style-09.light li { border-bottom: 1px solid rgba(255,255,255,.15);}
+.list-style-09 li { padding: 4px 0; border-bottom: 1px solid #e4e4e4; }
+.list-style-09 li:last-child { border-bottom: none; }
 
 /* accordion style 01 */
 .accordion-style-01 .panel .panel-heading { padding: 5px 0; }
