@@ -2444,9 +2444,9 @@
     let largeNumberOfSelected = 0
 
     const microNumberOfOptions = 14
-    const smallNumberOfOptions = 14
-    const medNumberOfOptions = 9
-    const largeNumberOfOptions = 7
+    const smallNumberOfOptions = 16
+    const medNumberOfOptions = 16
+    const largeNumberOfOptions = 16
 
     // SELECT ALL GROUPS - MICRO
     let strategicPlanClicked = false
@@ -2898,6 +2898,38 @@
         }
     })
 
+    let customerJourneyMaps = false;
+
+    $("#customerJourneyMaps").on('click', function () {
+        if (!customerJourneyMaps) {
+            customerJourneyMaps = true
+            smallNumberOfSelected += 1
+            $("#customerJourneyMaps-circle").addClass('d-none')
+            $("#customerJourneyMaps-check").removeClass('d-none')
+        } else {
+            customerJourneyMaps = false
+            smallNumberOfSelected -= 1
+            $("#customerJourneyMaps-circle").removeClass('d-none')
+            $("#customerJourneyMaps-check").addClass('d-none')
+        }
+    })
+
+    let financialStatements = false;
+
+    $("#financialStatements").on('click', function () {
+        if (!financialStatements) {
+            financialStatements = true
+            smallNumberOfSelected += 1
+            $("#financialStatements-circle").addClass('d-none')
+            $("#financialStatements-check").removeClass('d-none')
+        } else {
+            financialStatements = false
+            smallNumberOfSelected -= 1
+            $("#financialStatements-circle").removeClass('d-none')
+            $("#financialStatements-check").addClass('d-none')
+        }
+    })
+
     // SELECT ALL GROUPS - MED
 
     let projectManagementMethodology = false;
@@ -2980,19 +3012,19 @@
         }
     })
 
-    let oneOnOneLeadershipCoaching = false;
+    let sipocMed = false;
 
-    $("#oneOnOneLeadershipCoaching").on('click', function () {
-        if (!oneOnOneLeadershipCoaching) {
-            oneOnOneLeadershipCoaching = true
+    $("#sipocMed").on('click', function () {
+        if (!sipocMed) {
+            sipocMed = true
             medNumberOfSelected += 1
-            $("#oneOnOneLeadershipCoaching-circle").addClass('d-none')
-            $("#oneOnOneLeadershipCoaching-check").removeClass('d-none')
+            $("#sipocMed-circle").addClass('d-none')
+            $("#sipocMed-check").removeClass('d-none')
         } else {
-            oneOnOneLeadershipCoaching = false
+            sipocMed = false
             medNumberOfSelected -= 1
-            $("#oneOnOneLeadershipCoaching-circle").removeClass('d-none')
-            $("#oneOnOneLeadershipCoaching-check").addClass('d-none')
+            $("#sipocMed-circle").removeClass('d-none')
+            $("#sipocMed-check").addClass('d-none')
         }
     })
 
@@ -3041,6 +3073,118 @@
             medNumberOfSelected -= 1
             $("#payStructures-circle").removeClass('d-none')
             $("#payStructures-check").addClass('d-none')
+        }
+    })
+
+    let processMapsMed = false;
+
+    $("#processMapsMed").on('click', function () {
+        if (!processMapsMed) {
+            processMapsMed = true
+            medNumberOfSelected += 1
+            $("#processMapsMed-circle").addClass('d-none')
+            $("#processMapsMed-check").removeClass('d-none')
+        } else {
+            processMapsMed = false
+            medNumberOfSelected -= 1
+            $("#processMapsMed-circle").removeClass('d-none')
+            $("#processMapsMed-check").addClass('d-none')
+        }
+    })
+
+    let communicationRulesMed = false;
+
+    $("#communicationRulesMed").on('click', function () {
+        if (!communicationRulesMed) {
+            communicationRulesMed = true
+            medNumberOfSelected += 1
+            $("#communicationRulesMed-circle").addClass('d-none')
+            $("#communicationRulesMed-check").removeClass('d-none')
+        } else {
+            communicationRulesMed = false
+            medNumberOfSelected -= 1
+            $("#communicationRulesMed-circle").removeClass('d-none')
+            $("#communicationRulesMed-check").addClass('d-none')
+        }
+    })
+
+    let customerJourneyMapsMed = false;
+
+    $("#customerJourneyMapsMed").on('click', function () {
+        if (!customerJourneyMapsMed) {
+            customerJourneyMapsMed = true
+            medNumberOfSelected += 1
+            $("#customerJourneyMapsMed-circle").addClass('d-none')
+            $("#customerJourneyMapsMed-check").removeClass('d-none')
+        } else {
+            customerJourneyMapsMed = false
+            medNumberOfSelected -= 1
+            $("#customerJourneyMapsMed-circle").removeClass('d-none')
+            $("#customerJourneyMapsMed-check").addClass('d-none')
+        }
+    })
+
+    let roiCalculatorsMed = false;
+
+    $("#roiCalculatorsMed").on('click', function () {
+        if (!roiCalculatorsMed) {
+            roiCalculatorsMed = true
+            medNumberOfSelected += 1
+            $("#roiCalculatorsMed-circle").addClass('d-none')
+            $("#roiCalculatorsMed-check").removeClass('d-none')
+        } else {
+            roiCalculatorsMed = false
+            medNumberOfSelected -= 1
+            $("#roiCalculatorsMed-circle").removeClass('d-none')
+            $("#roiCalculatorsMed-check").addClass('d-none')
+        }
+    })
+
+    let productionScoreCardsMed = false;
+
+    $("#productionScoreCardsMed").on('click', function () {
+        if (!productionScoreCardsMed) {
+            productionScoreCardsMed = true
+            medNumberOfSelected += 1
+            $("#productionScoreCardsMed-circle").addClass('d-none')
+            $("#productionScoreCardsMed-check").removeClass('d-none')
+        } else {
+            productionScoreCardsMed = false
+            medNumberOfSelected -= 1
+            $("#productionScoreCardsMed-circle").removeClass('d-none')
+            $("#productionScoreCardsMed-check").addClass('d-none')
+        }
+    })
+
+    let salesCycleCrmMed = false;
+
+    $("#salesCycleCrmMed").on('click', function () {
+        if (!salesCycleCrmMed) {
+            salesCycleCrmMed = true
+            medNumberOfSelected += 1
+            $("#salesCycleCrmMed-circle").addClass('d-none')
+            $("#salesCycleCrmMed-check").removeClass('d-none')
+        } else {
+            salesCycleCrmMed = false
+            medNumberOfSelected -= 1
+            $("#salesCycleCrmMed-circle").removeClass('d-none')
+            $("#salesCycleCrmMed-check").addClass('d-none')
+        }
+    })
+
+    let pursuitAssessmentsMed = false;
+
+    $("#pursuitAssessmentsMed").on('click', function () {
+        if (!pursuitAssessmentsMed) {
+            pursuitAssessmentsMed = true
+            medNumberOfSelected += 1
+            $("#pursuitAssessmentsMed-circle").addClass('d-none')
+            $("#pursuitAssessmentsMed-check").removeClass('d-none')
+        } else {
+            pursuitAssessmentsMed = false
+            medNumberOfSelected -= 1
+            $("#pursuitAssessmentsMed-circle").removeClass('d-none')
+            $("#pursuitAssessmentsMed-check").addClass('d-none')
         }
     })
 
@@ -3156,6 +3300,150 @@
             largeNumberOfSelected -= 1
             $("#orientationProcessImprovement-circle").removeClass('d-none')
             $("#orientationProcessImprovement-check").addClass('d-none')
+        }
+    })
+
+    let projectManagementMethodologyLarge = false;
+
+    $("#projectManagementMethodologyLarge").on('click', function () {
+        if (!projectManagementMethodologyLarge) {
+            projectManagementMethodologyLarge = true
+            largeNumberOfSelected += 1
+            $("#projectManagementMethodologyLarge-circle").addClass('d-none')
+            $("#projectManagementMethodologyLarge-check").removeClass('d-none')
+        } else {
+            projectManagementMethodologyLarge = false
+            largeNumberOfSelected -= 1
+            $("#projectManagementMethodologyLarge-circle").removeClass('d-none')
+            $("#projectManagementMethodologyLarge-check").addClass('d-none')
+        }
+    })
+
+    let leadershipDevelopmentLarge = false;
+
+    $("#leadershipDevelopmentLarge").on('click', function () {
+        if (!leadershipDevelopmentLarge) {
+            leadershipDevelopmentLarge = true
+            largeNumberOfSelected += 1
+            $("#leadershipDevelopmentLarge-circle").addClass('d-none')
+            $("#leadershipDevelopmentLarge-check").removeClass('d-none')
+        } else {
+            leadershipDevelopmentLarge = false
+            largeNumberOfSelected -= 1
+            $("#leadershipDevelopmentLarge-circle").removeClass('d-none')
+            $("#leadershipDevelopmentLarge-check").addClass('d-none')
+        }
+    })
+
+    let sipocLarge = false;
+
+    $("#sipocLarge").on('click', function () {
+        if (!sipocLarge) {
+            sipocLarge = true
+            largeNumberOfSelected += 1
+            $("#sipocLarge-circle").addClass('d-none')
+            $("#sipocLarge-check").removeClass('d-none')
+        } else {
+            sipocLarge = false
+            largeNumberOfSelected -= 1
+            $("#sipocLarge-circle").removeClass('d-none')
+            $("#sipocLarge-check").addClass('d-none')
+        }
+    })
+
+    let dataSystemsAnalysisLarge = false;
+
+    $("#dataSystemsAnalysisLarge").on('click', function () {
+        if (!dataSystemsAnalysisLarge) {
+            dataSystemsAnalysisLarge = true
+            largeNumberOfSelected += 1
+            $("#dataSystemsAnalysisLarge-circle").addClass('d-none')
+            $("#dataSystemsAnalysisLarge-check").removeClass('d-none')
+        } else {
+            dataSystemsAnalysisLarge = false
+            largeNumberOfSelected -= 1
+            $("#dataSystemsAnalysisLarge-circle").removeClass('d-none')
+            $("#dataSystemsAnalysisLarge-check").addClass('d-none')
+        }
+    })
+
+    let careerLaddersSuccessionPlanningLarge = false;
+
+    $("#careerLaddersSuccessionPlanningLarge").on('click', function () {
+        if (!careerLaddersSuccessionPlanningLarge) {
+            careerLaddersSuccessionPlanningLarge = true
+            largeNumberOfSelected += 1
+            $("#careerLaddersSuccessionPlanningLarge-circle").addClass('d-none')
+            $("#careerLaddersSuccessionPlanningLarge-check").removeClass('d-none')
+        } else {
+            careerLaddersSuccessionPlanningLarge = false
+            largeNumberOfSelected -= 1
+            $("#careerLaddersSuccessionPlanningLarge-circle").removeClass('d-none')
+            $("#careerLaddersSuccessionPlanningLarge-check").addClass('d-none')
+        }
+    })
+
+    let changeManagementPlansLarge = false;
+
+    $("#changeManagementPlansLarge").on('click', function () {
+        if (!changeManagementPlansLarge) {
+            changeManagementPlansLarge = true
+            largeNumberOfSelected += 1
+            $("#changeManagementPlansLarge-circle").addClass('d-none')
+            $("#changeManagementPlansLarge-check").removeClass('d-none')
+        } else {
+            changeManagementPlansLarge = false
+            largeNumberOfSelected -= 1
+            $("#changeManagementPlansLarge-circle").removeClass('d-none')
+            $("#changeManagementPlansLarge-check").addClass('d-none')
+        }
+    })
+
+    let payStructuresLarge = false;
+
+    $("#payStructuresLarge").on('click', function () {
+        if (!payStructuresLarge) {
+            payStructuresLarge = true
+            largeNumberOfSelected += 1
+            $("#payStructuresLarge-circle").addClass('d-none')
+            $("#payStructuresLarge-check").removeClass('d-none')
+        } else {
+            payStructuresLarge = false
+            largeNumberOfSelected -= 1
+            $("#payStructuresLarge-circle").removeClass('d-none')
+            $("#payStructuresLarge-check").addClass('d-none')
+        }
+    })
+
+    let talentBehaviorAssessmentsLarge = false;
+
+    $("#talentBehaviorAssessmentsLarge").on('click', function () {
+        if (!talentBehaviorAssessmentsLarge) {
+            talentBehaviorAssessmentsLarge = true
+            largeNumberOfSelected += 1
+            $("#talentBehaviorAssessmentsLarge-circle").addClass('d-none')
+            $("#talentBehaviorAssessmentsLarge-check").removeClass('d-none')
+        } else {
+            talentBehaviorAssessmentsLarge = false
+            largeNumberOfSelected -= 1
+            $("#talentBehaviorAssessmentsLarge-circle").removeClass('d-none')
+            $("#talentBehaviorAssessmentsLarge-check").addClass('d-none')
+        }
+    })
+
+    let rulesOfCommunicationLarge = false;
+
+    $("#rulesOfCommunicationLarge").on('click', function () {
+        if (!rulesOfCommunicationLarge) {
+            rulesOfCommunicationLarge = true
+            largeNumberOfSelected += 1
+            $("#rulesOfCommunicationLarge-circle").addClass('d-none')
+            $("#rulesOfCommunicationLarge-check").removeClass('d-none')
+        } else {
+            rulesOfCommunicationLarge = false
+            largeNumberOfSelected -= 1
+            $("#rulesOfCommunicationLarge-circle").removeClass('d-none')
+            $("#rulesOfCommunicationLarge-check").addClass('d-none')
         }
     })
     // END--------
@@ -3524,19 +3812,44 @@
 
     switch (assessmentAnswers.employees) {
         case "1-4 employees":
-            $("#changePercentage").attr('data-percent', 100 - percentage(microNumberOfSelected, microNumberOfOptions).toFixed(2));
+            if((100 - percentage(microNumberOfSelected, microNumberOfOptions)) < 29){
+                $("#changePercentage").attr('data-start-color', '#baefba')
+                $("#changePercentage").attr('data-end-color', '#118b11')
+            }
+            $("#changePercentage").attr('data-percent', 100 - percentage(microNumberOfSelected, microNumberOfOptions).toFixed(0));
+            $("#reportPercentage").html(100 - percentage(microNumberOfSelected, microNumberOfOptions).toFixed(0));
             break;
         case "5-200 employees":
-            $("#changePercentage").attr('data-percent', 100 - percentage(smallNumberOfSelected, smallNumberOfOptions).toFixed(2));
+            if((100 - percentage(smallNumberOfSelected, smallNumberOfOptions)) < 29){
+                $("#changePercentage").attr('data-start-color', '#baefba')
+                $("#changePercentage").attr('data-end-color', '#118b11')
+            }
+            $("#changePercentage").attr('data-percent', 100 - percentage(smallNumberOfSelected, smallNumberOfOptions).toFixed(0));
+            $("#reportPercentage").html(100 - percentage(smallNumberOfSelected, smallNumberOfOptions).toFixed(0));
             break;
         case "201-1000 employees":
-            $("#changePercentage").attr('data-percent', 100 - percentage(medNumberOfSelected, medNumberOfOptions).toFixed(2));
+            if((100 - percentage(medNumberOfSelected, medNumberOfOptions)) < 29){
+                $("#changePercentage").attr('data-start-color', '#baefba')
+                $("#changePercentage").attr('data-end-color', '#118b11')
+            }
+            $("#changePercentage").attr('data-percent', 100 - percentage(medNumberOfSelected, medNumberOfOptions).toFixed(0));
+            $("#reportPercentage").html(100 - percentage(medNumberOfSelected, medNumberOfOptions).toFixed(0));
             break;
         case "1001-2000 employees":
-            $("#changePercentage").attr('data-percent', 100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(2));
+            if((100 - percentage(largeNumberOfSelected, largeNumberOfOptions)) < 29){
+                $("#changePercentage").attr('data-start-color', '#baefba')
+                $("#changePercentage").attr('data-end-color', '#118b11')
+            }
+            $("#changePercentage").attr('data-percent', 100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0));
+            $("#reportPercentage").html(100 - percentage(largeNumberOfSelected, largeNumberOfOptions)).toFixed(0);
             break;
         case "2001+ employees":
-            $("#changePercentage").attr('data-percent', 100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(2));
+            if((100 - percentage(largeNumberOfSelected, largeNumberOfOptions)) < 29){
+                $("#changePercentage").attr('data-start-color', '#baefba')
+                $("#changePercentage").attr('data-end-color', '#118b11')
+            }
+            $("#changePercentage").attr('data-percent', 100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0));
+            $("#reportPercentage").html(100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0));
             break;
         default:
             break;
