@@ -2438,1016 +2438,6 @@
 
     //   ODG LOGIC
 
-    let microNumberOfSelected = 0
-    let smallNumberOfSelected = 0
-    let medNumberOfSelected = 0
-    let largeNumberOfSelected = 0
-
-    const microNumberOfOptions = 14
-    const smallNumberOfOptions = 16
-    const medNumberOfOptions = 16
-    const largeNumberOfOptions = 16
-
-    // SELECT ALL GROUPS - MICRO
-    let strategicPlanClicked = false
-
-    $("#strategicPlan").on('click', function () {
-        if (!strategicPlanClicked) {
-            strategicPlanClicked = true
-            microNumberOfSelected += 1
-            $("#strategicPlan-circle").addClass('d-none')
-            $("#strategicPlan-check").removeClass('d-none')
-        } else {
-            strategicPlanClicked = false
-            microNumberOfSelected -= 1
-            $("#strategicPlan-circle").removeClass('d-none')
-            $("#strategicPlan-check").addClass('d-none')
-        }
-    })
-
-    let customerJourney = false;
-
-    $("#customerJourney").on('click', function () {
-        if (!customerJourney) {
-            customerJourney = true
-            microNumberOfSelected += 1
-            $("#customerJourney-circle").addClass('d-none')
-            $("#customerJourney-check").removeClass('d-none')
-        } else {
-            customerJourney = false
-            microNumberOfSelected -= 1
-            $("#customerJourney-circle").removeClass('d-none')
-            $("#customerJourney-check").addClass('d-none')
-        }
-    })
-
-    let idealProfiles = false;
-
-    $("#idealProfiles").on('click', function () {
-        if (!idealProfiles) {
-            idealProfiles = true
-            microNumberOfSelected += 1
-            $("#idealProfiles-circle").addClass('d-none')
-            $("#idealProfiles-check").removeClass('d-none')
-        } else {
-            idealProfiles = false
-            microNumberOfSelected -= 1
-            $("#idealProfiles-circle").removeClass('d-none')
-            $("#idealProfiles-check").addClass('d-none')
-        }
-    })
-
-    let gainAndFadeAnalysis = false;
-
-    $("#gainAndFadeAnalysis").on('click', function () {
-        if (!gainAndFadeAnalysis) {
-            gainAndFadeAnalysis = true
-            microNumberOfSelected += 1
-            $("#gainAndFadeAnalysis-circle").addClass('d-none')
-            $("#gainAndFadeAnalysis-check").removeClass('d-none')
-        } else {
-            gainAndFadeAnalysis = false
-            microNumberOfSelected -= 1
-            $("#gainAndFadeAnalysis-circle").removeClass('d-none')
-            $("#gainAndFadeAnalysis-check").addClass('d-none')
-        }
-    })
-
-    let decisionTrees = false;
-
-    $("#decisionTrees").on('click', function () {
-        if (!decisionTrees) {
-            decisionTrees = true
-            microNumberOfSelected += 1
-            $("#decisionTrees-circle").addClass('d-none')
-            $("#decisionTrees-check").removeClass('d-none')
-        } else {
-            decisionTrees = false
-            microNumberOfSelected -= 1
-            $("#decisionTrees-circle").removeClass('d-none')
-            $("#decisionTrees-check").addClass('d-none')
-        }
-    })
-
-    let problemSolvingWorkflows = false;
-
-    $("#problemSolvingWorkflows").on('click', function () {
-        if (!problemSolvingWorkflows) {
-            problemSolvingWorkflows = true
-            microNumberOfSelected += 1
-            $("#problemSolvingWorkflows-circle").addClass('d-none')
-            $("#problemSolvingWorkflows-check").removeClass('d-none')
-        } else {
-            problemSolvingWorkflows = false
-            microNumberOfSelected -= 1
-            $("#problemSolvingWorkflows-circle").removeClass('d-none')
-            $("#problemSolvingWorkflows-check").addClass('d-none')
-        }
-    })
-
-    let pursuitAssessments = false;
-
-    $("#pursuitAssessments").on('click', function () {
-        if (!pursuitAssessments) {
-            pursuitAssessments = true
-            microNumberOfSelected += 1
-            $("#pursuitAssessments-circle").addClass('d-none')
-            $("#pursuitAssessments-check").removeClass('d-none')
-        } else {
-            pursuitAssessments = false
-            microNumberOfSelected -= 1
-            $("#pursuitAssessments-circle").removeClass('d-none')
-            $("#pursuitAssessments-check").addClass('d-none')
-        }
-    })
-
-    let processMaps = false;
-
-    $("#processMaps").on('click', function () {
-        if (!processMaps) {
-            processMaps = true
-            microNumberOfSelected += 1
-            $("#processMaps-circle").addClass('d-none')
-            $("#processMaps-check").removeClass('d-none')
-        } else {
-            processMaps = false
-            microNumberOfSelected -= 1
-            $("#processMaps-circle").removeClass('d-none')
-            $("#processMaps-check").addClass('d-none')
-        }
-    })
-
-    let customerCostCalculators = false;
-
-    $("#customerCostCalculators").on('click', function () {
-        if (!customerCostCalculators) {
-            customerCostCalculators = true
-            microNumberOfSelected += 1
-            $("#customerCostCalculators-circle").addClass('d-none')
-            $("#customerCostCalculators-check").removeClass('d-none')
-        } else {
-            customerCostCalculators = false
-            microNumberOfSelected -= 1
-            $("#customerCostCalculators-circle").removeClass('d-none')
-            $("#customerCostCalculators-check").addClass('d-none')
-        }
-    })
-
-    let standardOperationsProcedures = false;
-
-    $("#standardOperationsProcedures").on('click', function () {
-        if (!standardOperationsProcedures) {
-            standardOperationsProcedures = true
-            microNumberOfSelected += 1
-            $("#standardOperationsProcedures-circle").addClass('d-none')
-            $("#standardOperationsProcedures-check").removeClass('d-none')
-        } else {
-            standardOperationsProcedures = false
-            microNumberOfSelected -= 1
-            $("#standardOperationsProcedures-circle").removeClass('d-none')
-            $("#standardOperationsProcedures-check").addClass('d-none')
-        }
-    })
-
-    let balanceSheetAnalysis = false;
-
-    $("#balanceSheetAnalysis").on('click', function () {
-        if (!balanceSheetAnalysis) {
-            balanceSheetAnalysis = true
-            microNumberOfSelected += 1
-            $("#balanceSheetAnalysis-circle").addClass('d-none')
-            $("#balanceSheetAnalysis-check").removeClass('d-none')
-        } else {
-            balanceSheetAnalysis = false
-            microNumberOfSelected -= 1
-            $("#balanceSheetAnalysis-circle").removeClass('d-none')
-            $("#balanceSheetAnalysis-check").addClass('d-none')
-        }
-    })
-
-    let cashflowAnalysis = false;
-
-    $("#cashflowAnalysis").on('click', function () {
-        if (!cashflowAnalysis) {
-            cashflowAnalysis = true
-            microNumberOfSelected += 1
-            $("#cashflowAnalysis-circle").addClass('d-none')
-            $("#cashflowAnalysis-check").removeClass('d-none')
-        } else {
-            cashflowAnalysis = false
-            microNumberOfSelected -= 1
-            $("#cashflowAnalysis-circle").removeClass('d-none')
-            $("#cashflowAnalysis-check").addClass('d-none')
-        }
-    })
-
-    let incomeStatementAnalysis = false;
-
-    $("#incomeStatementAnalysis").on('click', function () {
-        if (!incomeStatementAnalysis) {
-            incomeStatementAnalysis = true
-            microNumberOfSelected += 1
-            $("#incomeStatementAnalysis-circle").addClass('d-none')
-            $("#incomeStatementAnalysis-check").removeClass('d-none')
-        } else {
-            cashflowAnalysis = false
-            microNumberOfSelected -= 1
-            $("#incomeStatementAnalysis-circle").removeClass('d-none')
-            $("#incomeStatementAnalysis-check").addClass('d-none')
-        }
-    })
-
-    let serviceOfferingSystems = false;
-
-    $("#serviceOfferingSystems").on('click', function () {
-        if (!serviceOfferingSystems) {
-            serviceOfferingSystems = true
-            microNumberOfSelected += 1
-            $("#serviceOfferingSystems-circle").addClass('d-none')
-            $("#serviceOfferingSystems-check").removeClass('d-none')
-        } else {
-            serviceOfferingSystems = false
-            microNumberOfSelected -= 1
-            $("#serviceOfferingSystems-circle").removeClass('d-none')
-            $("#serviceOfferingSystems-check").addClass('d-none')
-        }
-    })
-    // SELECT ALL GROUPS - SMALL
-
-    let raciModels = false;
-
-    $("#raciModels").on('click', function () {
-        if (!raciModels) {
-            raciModels = true
-            smallNumberOfSelected += 1
-            $("#raciModels-circle").addClass('d-none')
-            $("#raciModels-check").removeClass('d-none')
-        } else {
-            raciModels = false
-            smallNumberOfSelected -= 1
-            $("#raciModels-circle").removeClass('d-none')
-            $("#raciModels-check").addClass('d-none')
-        }
-    })
-
-    let sipoc = false;
-
-    $("#sipoc").on('click', function () {
-        if (!sipoc) {
-            sipoc = true
-            smallNumberOfSelected += 1
-            $("#sipoc-circle").addClass('d-none')
-            $("#sipoc-check").removeClass('d-none')
-        } else {
-            sipoc = false
-            smallNumberOfSelected -= 1
-            $("#sipoc-circle").removeClass('d-none')
-            $("#sipoc-check").addClass('d-none')
-        }
-    })
-
-    let onBoardingChecklists = false;
-
-    $("#onBoardingChecklists").on('click', function () {
-        if (!onBoardingChecklists) {
-            onBoardingChecklists = true
-            smallNumberOfSelected += 1
-            $("#onBoardingChecklists-circle").addClass('d-none')
-            $("#onBoardingChecklists-check").removeClass('d-none')
-        } else {
-            onBoardingChecklists = false
-            smallNumberOfSelected -= 1
-            $("#onBoardingChecklists-circle").removeClass('d-none')
-            $("#onBoardingChecklists-check").addClass('d-none')
-        }
-    })
-
-    let kpiClarityWorksheets = false;
-
-    $("#kpiClarityWorksheets").on('click', function () {
-        if (!kpiClarityWorksheets) {
-            kpiClarityWorksheets = true
-            smallNumberOfSelected += 1
-            $("#kpiClarityWorksheets-circle").addClass('d-none')
-            $("#kpiClarityWorksheets-check").removeClass('d-none')
-        } else {
-            kpiClarityWorksheets = false
-            smallNumberOfSelected -= 1
-            $("#kpiClarityWorksheets-circle").removeClass('d-none')
-            $("#kpiClarityWorksheets-check").addClass('d-none')
-        }
-    })
-
-    let turnoverAnalysis = false;
-
-    $("#turnoverAnalysis").on('click', function () {
-        if (!turnoverAnalysis) {
-            turnoverAnalysis = true
-            smallNumberOfSelected += 1
-            $("#turnoverAnalysis-circle").addClass('d-none')
-            $("#turnoverAnalysis-check").removeClass('d-none')
-        } else {
-            turnoverAnalysis = false
-            smallNumberOfSelected -= 1
-            $("#turnoverAnalysis-circle").removeClass('d-none')
-            $("#turnoverAnalysis-check").addClass('d-none')
-        }
-    })
-
-    let hiringProcessImprovements = false;
-
-    $("#hiringProcessImprovements").on('click', function () {
-        if (!hiringProcessImprovements) {
-            hiringProcessImprovements = true
-            smallNumberOfSelected += 1
-            $("#hiringProcessImprovements-circle").addClass('d-none')
-            $("#hiringProcessImprovements-check").removeClass('d-none')
-        } else {
-            hiringProcessImprovements = false
-            smallNumberOfSelected -= 1
-            $("#hiringProcessImprovements-circle").removeClass('d-none')
-            $("#hiringProcessImprovements-check").addClass('d-none')
-        }
-    })
-
-    let salesCycleCreation = false;
-
-    $("#salesCycleCreation").on('click', function () {
-        if (!salesCycleCreation) {
-            salesCycleCreation = true
-            smallNumberOfSelected += 1
-            $("#salesCycleCreation-circle").addClass('d-none')
-            $("#salesCycleCreation-check").removeClass('d-none')
-        } else {
-            salesCycleCreation = false
-            smallNumberOfSelected -= 1
-            $("#salesCycleCreation-circle").removeClass('d-none')
-            $("#salesCycleCreation-check").addClass('d-none')
-        }
-    })
-
-    let roiRetention = false;
-
-    $("#roiRetention").on('click', function () {
-        if (!roiRetention) {
-            roiRetention = true
-            smallNumberOfSelected += 1
-            $("#roiRetention-circle").addClass('d-none')
-            $("#roiRetention-check").removeClass('d-none')
-        } else {
-            roiRetention = false
-            smallNumberOfSelected -= 1
-            $("#roiRetention-circle").removeClass('d-none')
-            $("#roiRetention-check").addClass('d-none')
-        }
-    })
-
-    let rulesOfCommunication = false;
-
-    $("#rulesOfCommunication").on('click', function () {
-        if (!rulesOfCommunication) {
-            rulesOfCommunication = true
-            smallNumberOfSelected += 1
-            $("#rulesOfCommunication-circle").addClass('d-none')
-            $("#rulesOfCommunication-check").removeClass('d-none')
-        } else {
-            rulesOfCommunication = false
-            smallNumberOfSelected -= 1
-            $("#rulesOfCommunication-circle").removeClass('d-none')
-            $("#rulesOfCommunication-check").addClass('d-none')
-        }
-    })
-
-    let newEmployeeProvisioning = false;
-
-    $("#newEmployeeProvisioning").on('click', function () {
-        if (!newEmployeeProvisioning) {
-            newEmployeeProvisioning = true
-            smallNumberOfSelected += 1
-            $("#newEmployeeProvisioning-circle").addClass('d-none')
-            $("#newEmployeeProvisioning-check").removeClass('d-none')
-        } else {
-            newEmployeeProvisioning = false
-            smallNumberOfSelected -= 1
-            $("#newEmployeeProvisioning-circle").removeClass('d-none')
-            $("#newEmployeeProvisioning-check").addClass('d-none')
-        }
-    })
-
-    let depProductionScoreCards = false;
-
-    $("#depProductionScoreCards").on('click', function () {
-        if (!depProductionScoreCards) {
-            depProductionScoreCards = true
-            smallNumberOfSelected += 1
-            $("#depProductionScoreCards-circle").addClass('d-none')
-            $("#depProductionScoreCards-check").removeClass('d-none')
-        } else {
-            depProductionScoreCards = false
-            smallNumberOfSelected -= 1
-            $("#depProductionScoreCards-circle").removeClass('d-none')
-            $("#depProductionScoreCards-check").addClass('d-none')
-        }
-    })
-
-    let prehireChecklist = false;
-
-    $("#prehireChecklist").on('click', function () {
-        if (!prehireChecklist) {
-            prehireChecklist = true
-            smallNumberOfSelected += 1
-            $("#prehireChecklist-circle").addClass('d-none')
-            $("#prehireChecklist-check").removeClass('d-none')
-        } else {
-            prehireChecklist = false
-            smallNumberOfSelected -= 1
-            $("#prehireChecklist-circle").removeClass('d-none')
-            $("#prehireChecklist-check").addClass('d-none')
-        }
-    })
-
-    let contingencyPlans = false;
-
-    $("#contingencyPlans").on('click', function () {
-        if (!contingencyPlans) {
-            contingencyPlans = true
-            smallNumberOfSelected += 1
-            $("#contingencyPlans-circle").addClass('d-none')
-            $("#contingencyPlans-check").removeClass('d-none')
-        } else {
-            contingencyPlans = false
-            smallNumberOfSelected -= 1
-            $("#contingencyPlans-circle").removeClass('d-none')
-            $("#contingencyPlans-check").addClass('d-none')
-        }
-    })
-
-    let cleanReportingWorksheets = false;
-
-    $("#cleanReportingWorksheets").on('click', function () {
-        if (!cleanReportingWorksheets) {
-            cleanReportingWorksheets = true
-            smallNumberOfSelected += 1
-            $("#cleanReportingWorksheets-circle").addClass('d-none')
-            $("#cleanReportingWorksheets-check").removeClass('d-none')
-        } else {
-            cleanReportingWorksheets = false
-            smallNumberOfSelected -= 1
-            $("#cleanReportingWorksheets-circle").removeClass('d-none')
-            $("#cleanReportingWorksheets-check").addClass('d-none')
-        }
-    })
-
-    let customerJourneyMaps = false;
-
-    $("#customerJourneyMaps").on('click', function () {
-        if (!customerJourneyMaps) {
-            customerJourneyMaps = true
-            smallNumberOfSelected += 1
-            $("#customerJourneyMaps-circle").addClass('d-none')
-            $("#customerJourneyMaps-check").removeClass('d-none')
-        } else {
-            customerJourneyMaps = false
-            smallNumberOfSelected -= 1
-            $("#customerJourneyMaps-circle").removeClass('d-none')
-            $("#customerJourneyMaps-check").addClass('d-none')
-        }
-    })
-
-    let financialStatements = false;
-
-    $("#financialStatements").on('click', function () {
-        if (!financialStatements) {
-            financialStatements = true
-            smallNumberOfSelected += 1
-            $("#financialStatements-circle").addClass('d-none')
-            $("#financialStatements-check").removeClass('d-none')
-        } else {
-            financialStatements = false
-            smallNumberOfSelected -= 1
-            $("#financialStatements-circle").removeClass('d-none')
-            $("#financialStatements-check").addClass('d-none')
-        }
-    })
-
-    // SELECT ALL GROUPS - MED
-
-    let projectManagementMethodology = false;
-
-    $("#projectManagementMethodology").on('click', function () {
-        if (!projectManagementMethodology) {
-            projectManagementMethodology = true
-            medNumberOfSelected += 1
-            $("#projectManagementMethodology-circle").addClass('d-none')
-            $("#projectManagementMethodology-check").removeClass('d-none')
-        } else {
-            projectManagementMethodology = false
-            medNumberOfSelected -= 1
-            $("#projectManagementMethodology-circle").removeClass('d-none')
-            $("#projectManagementMethodology-check").addClass('d-none')
-        }
-    })
-
-    let changeManagementPlans = false;
-
-    $("#changeManagementPlans").on('click', function () {
-        if (!changeManagementPlans) {
-            changeManagementPlans = true
-            medNumberOfSelected += 1
-            $("#changeManagementPlans-circle").addClass('d-none')
-            $("#changeManagementPlans-check").removeClass('d-none')
-        } else {
-            changeManagementPlans = false
-            medNumberOfSelected -= 1
-            $("#changeManagementPlans-circle").removeClass('d-none')
-            $("#changeManagementPlans-check").addClass('d-none')
-        }
-    })
-
-    let dataSystemsAnalysis = false;
-
-    $("#dataSystemsAnalysis").on('click', function () {
-        if (!dataSystemsAnalysis) {
-            dataSystemsAnalysis = true
-            medNumberOfSelected += 1
-            $("#dataSystemsAnalysis-circle").addClass('d-none')
-            $("#dataSystemsAnalysis-check").removeClass('d-none')
-        } else {
-            dataSystemsAnalysis 
-            medNumberOfSelected -= 1
-            $("#dataSystemsAnalysis-circle").removeClass('d-none')
-            $("#dataSystemsAnalysis-check").addClass('d-none')
-        }
-    })
-
-    let productiveMeetingsTrainings = false;
-
-    $("#productiveMeetingsTrainings").on('click', function () {
-        if (!productiveMeetingsTrainings) {
-            productiveMeetingsTrainings = true
-            medNumberOfSelected += 1
-            $("#productiveMeetingsTrainings-circle").addClass('d-none')
-            $("#productiveMeetingsTrainings-check").removeClass('d-none')
-        } else {
-            productiveMeetingsTrainings = false
-            medNumberOfSelected -= 1
-            $("#productiveMeetingsTrainings-circle").removeClass('d-none')
-            $("#productiveMeetingsTrainings-check").addClass('d-none')
-        }
-    })
-
-    let leadershipDevelopment = false;
-
-    $("#leadershipDevelopment").on('click', function () {
-        if (!leadershipDevelopment) {
-            leadershipDevelopment = true
-            medNumberOfSelected += 1
-            $("#leadershipDevelopment-circle").addClass('d-none')
-            $("#leadershipDevelopment-check").removeClass('d-none')
-        } else {
-            leadershipDevelopment = false
-            medNumberOfSelected -= 1
-            $("#leadershipDevelopment-circle").removeClass('d-none')
-            $("#leadershipDevelopment-check").addClass('d-none')
-        }
-    })
-
-    let sipocMed = false;
-
-    $("#sipocMed").on('click', function () {
-        if (!sipocMed) {
-            sipocMed = true
-            medNumberOfSelected += 1
-            $("#sipocMed-circle").addClass('d-none')
-            $("#sipocMed-check").removeClass('d-none')
-        } else {
-            sipocMed = false
-            medNumberOfSelected -= 1
-            $("#sipocMed-circle").removeClass('d-none')
-            $("#sipocMed-check").addClass('d-none')
-        }
-    })
-
-    let careerLaddersSuccessionPlanning = false;
-
-    $("#careerLaddersSuccessionPlanning").on('click', function () {
-        if (!careerLaddersSuccessionPlanning) {
-            careerLaddersSuccessionPlanning = true
-            medNumberOfSelected += 1
-            $("#careerLaddersSuccessionPlanning-circle").addClass('d-none')
-            $("#careerLaddersSuccessionPlanning-check").removeClass('d-none')
-        } else {
-            careerLaddersSuccessionPlanning = false
-            medNumberOfSelected -= 1
-            $("#careerLaddersSuccessionPlanning-circle").removeClass('d-none')
-            $("#careerLaddersSuccessionPlanning-check").addClass('d-none')
-        }
-    })
-
-    let talentBehaviorAssessments = false;
-
-    $("#talentBehaviorAssessments").on('click', function () {
-        if (!talentBehaviorAssessments) {
-            talentBehaviorAssessments = true
-            medNumberOfSelected += 1
-            $("#talentBehaviorAssessments-circle").addClass('d-none')
-            $("#talentBehaviorAssessments-check").removeClass('d-none')
-        } else {
-            talentBehaviorAssessments = false
-            medNumberOfSelected -= 1
-            $("#talentBehaviorAssessments-circle").removeClass('d-none')
-            $("#talentBehaviorAssessments-check").addClass('d-none')
-        }
-    })
-
-    let payStructures = false;
-
-    $("#payStructures").on('click', function () {
-        if (!payStructures) {
-            payStructures = true
-            medNumberOfSelected += 1
-            $("#payStructures-circle").addClass('d-none')
-            $("#payStructures-check").removeClass('d-none')
-        } else {
-            payStructures = false
-            medNumberOfSelected -= 1
-            $("#payStructures-circle").removeClass('d-none')
-            $("#payStructures-check").addClass('d-none')
-        }
-    })
-
-    let processMapsMed = false;
-
-    $("#processMapsMed").on('click', function () {
-        if (!processMapsMed) {
-            processMapsMed = true
-            medNumberOfSelected += 1
-            $("#processMapsMed-circle").addClass('d-none')
-            $("#processMapsMed-check").removeClass('d-none')
-        } else {
-            processMapsMed = false
-            medNumberOfSelected -= 1
-            $("#processMapsMed-circle").removeClass('d-none')
-            $("#processMapsMed-check").addClass('d-none')
-        }
-    })
-
-    let communicationRulesMed = false;
-
-    $("#communicationRulesMed").on('click', function () {
-        if (!communicationRulesMed) {
-            communicationRulesMed = true
-            medNumberOfSelected += 1
-            $("#communicationRulesMed-circle").addClass('d-none')
-            $("#communicationRulesMed-check").removeClass('d-none')
-        } else {
-            communicationRulesMed = false
-            medNumberOfSelected -= 1
-            $("#communicationRulesMed-circle").removeClass('d-none')
-            $("#communicationRulesMed-check").addClass('d-none')
-        }
-    })
-
-    let customerJourneyMapsMed = false;
-
-    $("#customerJourneyMapsMed").on('click', function () {
-        if (!customerJourneyMapsMed) {
-            customerJourneyMapsMed = true
-            medNumberOfSelected += 1
-            $("#customerJourneyMapsMed-circle").addClass('d-none')
-            $("#customerJourneyMapsMed-check").removeClass('d-none')
-        } else {
-            customerJourneyMapsMed = false
-            medNumberOfSelected -= 1
-            $("#customerJourneyMapsMed-circle").removeClass('d-none')
-            $("#customerJourneyMapsMed-check").addClass('d-none')
-        }
-    })
-
-    let roiCalculatorsMed = false;
-
-    $("#roiCalculatorsMed").on('click', function () {
-        if (!roiCalculatorsMed) {
-            roiCalculatorsMed = true
-            medNumberOfSelected += 1
-            $("#roiCalculatorsMed-circle").addClass('d-none')
-            $("#roiCalculatorsMed-check").removeClass('d-none')
-        } else {
-            roiCalculatorsMed = false
-            medNumberOfSelected -= 1
-            $("#roiCalculatorsMed-circle").removeClass('d-none')
-            $("#roiCalculatorsMed-check").addClass('d-none')
-        }
-    })
-
-    let productionScoreCardsMed = false;
-
-    $("#productionScoreCardsMed").on('click', function () {
-        if (!productionScoreCardsMed) {
-            productionScoreCardsMed = true
-            medNumberOfSelected += 1
-            $("#productionScoreCardsMed-circle").addClass('d-none')
-            $("#productionScoreCardsMed-check").removeClass('d-none')
-        } else {
-            productionScoreCardsMed = false
-            medNumberOfSelected -= 1
-            $("#productionScoreCardsMed-circle").removeClass('d-none')
-            $("#productionScoreCardsMed-check").addClass('d-none')
-        }
-    })
-
-    let salesCycleCrmMed = false;
-
-    $("#salesCycleCrmMed").on('click', function () {
-        if (!salesCycleCrmMed) {
-            salesCycleCrmMed = true
-            medNumberOfSelected += 1
-            $("#salesCycleCrmMed-circle").addClass('d-none')
-            $("#salesCycleCrmMed-check").removeClass('d-none')
-        } else {
-            salesCycleCrmMed = false
-            medNumberOfSelected -= 1
-            $("#salesCycleCrmMed-circle").removeClass('d-none')
-            $("#salesCycleCrmMed-check").addClass('d-none')
-        }
-    })
-
-    let pursuitAssessmentsMed = false;
-
-    $("#pursuitAssessmentsMed").on('click', function () {
-        if (!pursuitAssessmentsMed) {
-            pursuitAssessmentsMed = true
-            medNumberOfSelected += 1
-            $("#pursuitAssessmentsMed-circle").addClass('d-none')
-            $("#pursuitAssessmentsMed-check").removeClass('d-none')
-        } else {
-            pursuitAssessmentsMed = false
-            medNumberOfSelected -= 1
-            $("#pursuitAssessmentsMed-circle").removeClass('d-none')
-            $("#pursuitAssessmentsMed-check").addClass('d-none')
-        }
-    })
-
-
-    // SELECT ALL GROUPS - LARGE
-
-    let workingCapitalFundingGap = false;
-
-    $("#workingCapitalFundingGap").on('click', function () {
-        if (!workingCapitalFundingGap) {
-            workingCapitalFundingGap = true
-            largeNumberOfSelected += 1
-            $("#workingCapitalFundingGap-circle").addClass('d-none')
-            $("#workingCapitalFundingGap-check").removeClass('d-none')
-        } else {
-            workingCapitalFundingGap 
-            largeNumberOfSelected -= 1
-            $("#workingCapitalFundingGap-circle").removeClass('d-none')
-            $("#workingCapitalFundingGap-check").addClass('d-none')
-        }
-    })
-
-    let speedOfExecutionAnalysis = false;
-
-    $("#speedOfExecutionAnalysis").on('click', function () {
-        if (!speedOfExecutionAnalysis) {
-            speedOfExecutionAnalysis = true
-            largeNumberOfSelected += 1
-            $("#speedOfExecutionAnalysis-circle").addClass('d-none')
-            $("#speedOfExecutionAnalysis-check").removeClass('d-none')
-        } else {
-            speedOfExecutionAnalysis = false
-            largeNumberOfSelected -= 1
-            $("#speedOfExecutionAnalysis-circle").removeClass('d-none')
-            $("#speedOfExecutionAnalysis-check").addClass('d-none')
-        }
-    })
-
-    let dupontAnalysis = false;
-
-    $("#dupontAnalysis").on('click', function () {
-        if (!dupontAnalysis) {
-            dupontAnalysis = true
-            largeNumberOfSelected += 1
-            $("#dupontAnalysis-circle").addClass('d-none')
-            $("#dupontAnalysis-check").removeClass('d-none')
-        } else {
-            dupontAnalysis = false
-            largeNumberOfSelected -= 1
-            $("#dupontAnalysis-circle").removeClass('d-none')
-            $("#dupontAnalysis-check").addClass('d-none')
-        }
-    })
-
-    let roeLeversCalculators = false;
-
-    $("#roeLeversCalculators").on('click', function () {
-        if (!roeLeversCalculators) {
-            roeLeversCalculators = true
-            largeNumberOfSelected += 1
-            $("#roeLeversCalculators-circle").addClass('d-none')
-            $("#roeLeversCalculators-check").removeClass('d-none')
-        } else {
-            roeLeversCalculators = false
-            largeNumberOfSelected -= 1
-            $("#roeLeversCalculators-circle").removeClass('d-none')
-            $("#roeLeversCalculators-check").addClass('d-none')
-        }
-    })
-
-    let orgainizationalRestructures = false;
-
-    $("#orgainizationalRestructures").on('click', function () {
-        if (!orgainizationalRestructures) {
-            orgainizationalRestructures = true
-            largeNumberOfSelected += 1
-            $("#orgainizationalRestructures-circle").addClass('d-none')
-            $("#orgainizationalRestructures-check").removeClass('d-none')
-        } else {
-            orgainizationalRestructures = false
-            largeNumberOfSelected -= 1
-            $("#orgainizationalRestructures-circle").removeClass('d-none')
-            $("#orgainizationalRestructures-check").addClass('d-none')
-        }
-    })
-
-    let lmsSetupsDevelopment = false;
-
-    $("#lmsSetupsDevelopment").on('click', function () {
-        if (!lmsSetupsDevelopment) {
-            lmsSetupsDevelopment = true
-            largeNumberOfSelected += 1
-            $("#lmsSetupsDevelopment-circle").addClass('d-none')
-            $("#lmsSetupsDevelopment-check").removeClass('d-none')
-        } else {
-            lmsSetupsDevelopment = false
-            largeNumberOfSelected -= 1
-            $("#lmsSetupsDevelopment-circle").removeClass('d-none')
-            $("#lmsSetupsDevelopment-check").addClass('d-none')
-        }
-    })
-
-    let orientationProcessImprovement = false;
-
-    $("#orientationProcessImprovement").on('click', function () {
-        if (!orientationProcessImprovement) {
-            orientationProcessImprovement = true
-            largeNumberOfSelected += 1
-            $("#orientationProcessImprovement-circle").addClass('d-none')
-            $("#orientationProcessImprovement-check").removeClass('d-none')
-        } else {
-            orientationProcessImprovement = false
-            largeNumberOfSelected -= 1
-            $("#orientationProcessImprovement-circle").removeClass('d-none')
-            $("#orientationProcessImprovement-check").addClass('d-none')
-        }
-    })
-
-    let projectManagementMethodologyLarge = false;
-
-    $("#projectManagementMethodologyLarge").on('click', function () {
-        if (!projectManagementMethodologyLarge) {
-            projectManagementMethodologyLarge = true
-            largeNumberOfSelected += 1
-            $("#projectManagementMethodologyLarge-circle").addClass('d-none')
-            $("#projectManagementMethodologyLarge-check").removeClass('d-none')
-        } else {
-            projectManagementMethodologyLarge = false
-            largeNumberOfSelected -= 1
-            $("#projectManagementMethodologyLarge-circle").removeClass('d-none')
-            $("#projectManagementMethodologyLarge-check").addClass('d-none')
-        }
-    })
-
-    let leadershipDevelopmentLarge = false;
-
-    $("#leadershipDevelopmentLarge").on('click', function () {
-        if (!leadershipDevelopmentLarge) {
-            leadershipDevelopmentLarge = true
-            largeNumberOfSelected += 1
-            $("#leadershipDevelopmentLarge-circle").addClass('d-none')
-            $("#leadershipDevelopmentLarge-check").removeClass('d-none')
-        } else {
-            leadershipDevelopmentLarge = false
-            largeNumberOfSelected -= 1
-            $("#leadershipDevelopmentLarge-circle").removeClass('d-none')
-            $("#leadershipDevelopmentLarge-check").addClass('d-none')
-        }
-    })
-
-    let sipocLarge = false;
-
-    $("#sipocLarge").on('click', function () {
-        if (!sipocLarge) {
-            sipocLarge = true
-            largeNumberOfSelected += 1
-            $("#sipocLarge-circle").addClass('d-none')
-            $("#sipocLarge-check").removeClass('d-none')
-        } else {
-            sipocLarge = false
-            largeNumberOfSelected -= 1
-            $("#sipocLarge-circle").removeClass('d-none')
-            $("#sipocLarge-check").addClass('d-none')
-        }
-    })
-
-    let dataSystemsAnalysisLarge = false;
-
-    $("#dataSystemsAnalysisLarge").on('click', function () {
-        if (!dataSystemsAnalysisLarge) {
-            dataSystemsAnalysisLarge = true
-            largeNumberOfSelected += 1
-            $("#dataSystemsAnalysisLarge-circle").addClass('d-none')
-            $("#dataSystemsAnalysisLarge-check").removeClass('d-none')
-        } else {
-            dataSystemsAnalysisLarge = false
-            largeNumberOfSelected -= 1
-            $("#dataSystemsAnalysisLarge-circle").removeClass('d-none')
-            $("#dataSystemsAnalysisLarge-check").addClass('d-none')
-        }
-    })
-
-    let careerLaddersSuccessionPlanningLarge = false;
-
-    $("#careerLaddersSuccessionPlanningLarge").on('click', function () {
-        if (!careerLaddersSuccessionPlanningLarge) {
-            careerLaddersSuccessionPlanningLarge = true
-            largeNumberOfSelected += 1
-            $("#careerLaddersSuccessionPlanningLarge-circle").addClass('d-none')
-            $("#careerLaddersSuccessionPlanningLarge-check").removeClass('d-none')
-        } else {
-            careerLaddersSuccessionPlanningLarge = false
-            largeNumberOfSelected -= 1
-            $("#careerLaddersSuccessionPlanningLarge-circle").removeClass('d-none')
-            $("#careerLaddersSuccessionPlanningLarge-check").addClass('d-none')
-        }
-    })
-
-    let changeManagementPlansLarge = false;
-
-    $("#changeManagementPlansLarge").on('click', function () {
-        if (!changeManagementPlansLarge) {
-            changeManagementPlansLarge = true
-            largeNumberOfSelected += 1
-            $("#changeManagementPlansLarge-circle").addClass('d-none')
-            $("#changeManagementPlansLarge-check").removeClass('d-none')
-        } else {
-            changeManagementPlansLarge = false
-            largeNumberOfSelected -= 1
-            $("#changeManagementPlansLarge-circle").removeClass('d-none')
-            $("#changeManagementPlansLarge-check").addClass('d-none')
-        }
-    })
-
-    let payStructuresLarge = false;
-
-    $("#payStructuresLarge").on('click', function () {
-        if (!payStructuresLarge) {
-            payStructuresLarge = true
-            largeNumberOfSelected += 1
-            $("#payStructuresLarge-circle").addClass('d-none')
-            $("#payStructuresLarge-check").removeClass('d-none')
-        } else {
-            payStructuresLarge = false
-            largeNumberOfSelected -= 1
-            $("#payStructuresLarge-circle").removeClass('d-none')
-            $("#payStructuresLarge-check").addClass('d-none')
-        }
-    })
-
-    let talentBehaviorAssessmentsLarge = false;
-
-    $("#talentBehaviorAssessmentsLarge").on('click', function () {
-        if (!talentBehaviorAssessmentsLarge) {
-            talentBehaviorAssessmentsLarge = true
-            largeNumberOfSelected += 1
-            $("#talentBehaviorAssessmentsLarge-circle").addClass('d-none')
-            $("#talentBehaviorAssessmentsLarge-check").removeClass('d-none')
-        } else {
-            talentBehaviorAssessmentsLarge = false
-            largeNumberOfSelected -= 1
-            $("#talentBehaviorAssessmentsLarge-circle").removeClass('d-none')
-            $("#talentBehaviorAssessmentsLarge-check").addClass('d-none')
-        }
-    })
-
-    let rulesOfCommunicationLarge = false;
-
-    $("#rulesOfCommunicationLarge").on('click', function () {
-        if (!rulesOfCommunicationLarge) {
-            rulesOfCommunicationLarge = true
-            largeNumberOfSelected += 1
-            $("#rulesOfCommunicationLarge-circle").addClass('d-none')
-            $("#rulesOfCommunicationLarge-check").removeClass('d-none')
-        } else {
-            rulesOfCommunicationLarge = false
-            largeNumberOfSelected -= 1
-            $("#rulesOfCommunicationLarge-circle").removeClass('d-none')
-            $("#rulesOfCommunicationLarge-check").addClass('d-none')
-        }
-    })
-    // END--------
-
     // assesment state
     let lastSelectedEmplyoee = "employees-1"
     let lastRevenueRange = "revenue-1"
@@ -3466,6 +2456,1166 @@
         frontlineLeaders: "",
         departments: ""
     };
+
+
+    //OPTION COUNTERS UTILIZED BY THE BUSINESS 
+
+    let microNumberOfSelected = 0
+    let smallNumberOfSelected = 0
+    let medNumberOfSelected = 0
+    let largeNumberOfSelected = 0
+
+    const microNumberOfOptions = 14
+    const smallNumberOfOptions = 16
+    const medNumberOfOptions = 16
+    const largeNumberOfOptions = 16
+
+
+    let selectedAnswers = {}
+
+    // SELECT ALL GROUPS - MICRO
+    let strategicPlanClicked = false
+
+    $("#strategicPlan").on('click', function () {
+        if (!strategicPlanClicked) {
+            strategicPlanClicked = true
+            microNumberOfSelected += 1
+            $("#strategicPlan-circle").addClass('d-none')
+            $("#strategicPlan-check").removeClass('d-none')
+            selectedAnswers['microStrategicPlan'] = 'Strategic Plans'
+        } else {
+            strategicPlanClicked = false
+            microNumberOfSelected -= 1
+            $("#strategicPlan-circle").removeClass('d-none')
+            $("#strategicPlan-check").addClass('d-none')
+            delete selectedAnswers['microStrategicPlan']
+        }
+    })
+
+    let customerJourney = false;
+
+    $("#customerJourney").on('click', function () {
+        if (!customerJourney) {
+            customerJourney = true
+            microNumberOfSelected += 1
+            $("#customerJourney-circle").addClass('d-none')
+            $("#customerJourney-check").removeClass('d-none')
+            selectedAnswers['microCustomerJourney'] = 'Customer Journey Maps'
+        } else {
+            customerJourney = false
+            microNumberOfSelected -= 1
+            $("#customerJourney-circle").removeClass('d-none')
+            $("#customerJourney-check").addClass('d-none')
+            delete selectedAnswers['microCustomerJourney']
+        }
+    })
+
+    let idealProfiles = false;
+
+    $("#idealProfiles").on('click', function () {
+        if (!idealProfiles) {
+            idealProfiles = true
+            microNumberOfSelected += 1
+            $("#idealProfiles-circle").addClass('d-none')
+            $("#idealProfiles-check").removeClass('d-none')
+            selectedAnswers['idealProfilesMicro'] = 'Ideal Customer Profiles'
+        } else {
+            idealProfiles = false
+            microNumberOfSelected -= 1
+            $("#idealProfiles-circle").removeClass('d-none')
+            $("#idealProfiles-check").addClass('d-none')
+            delete selectedAnswers['idealProfilesMicro']
+        }
+    })
+
+    let gainAndFadeAnalysis = false;
+
+    $("#gainAndFadeAnalysis").on('click', function () {
+        if (!gainAndFadeAnalysis) {
+            gainAndFadeAnalysis = true
+            microNumberOfSelected += 1
+            $("#gainAndFadeAnalysis-circle").addClass('d-none')
+            $("#gainAndFadeAnalysis-check").removeClass('d-none')
+            selectedAnswers['gainAndFadeAnalysisMicro'] = 'Gain And Fade Analysis'
+        } else {
+            gainAndFadeAnalysis = false
+            microNumberOfSelected -= 1
+            $("#gainAndFadeAnalysis-circle").removeClass('d-none')
+            $("#gainAndFadeAnalysis-check").addClass('d-none')
+            delete selectedAnswers['gainAndFadeAnalysisMicro']
+        }
+    })
+
+    let decisionTrees = false;
+
+    $("#decisionTrees").on('click', function () {
+        if (!decisionTrees) {
+            decisionTrees = true
+            microNumberOfSelected += 1
+            $("#decisionTrees-circle").addClass('d-none')
+            $("#decisionTrees-check").removeClass('d-none')
+            selectedAnswers['decisionTreesMicro'] = 'Decision Trees'
+        } else {
+            decisionTrees = false
+            microNumberOfSelected -= 1
+            $("#decisionTrees-circle").removeClass('d-none')
+            $("#decisionTrees-check").addClass('d-none')
+            delete selectedAnswers['decisionTreesMicro']
+        }
+    })
+
+    let problemSolvingWorkflows = false;
+
+    $("#problemSolvingWorkflows").on('click', function () {
+        if (!problemSolvingWorkflows) {
+            problemSolvingWorkflows = true
+            microNumberOfSelected += 1
+            $("#problemSolvingWorkflows-circle").addClass('d-none')
+            $("#problemSolvingWorkflows-check").removeClass('d-none')
+            selectedAnswers['problemSolvingWorkflowsMicro'] = 'Process Maps / Workflows'
+        } else {
+            problemSolvingWorkflows = false
+            microNumberOfSelected -= 1
+            $("#problemSolvingWorkflows-circle").removeClass('d-none')
+            $("#problemSolvingWorkflows-check").addClass('d-none')
+            delete selectedAnswers['problemSolvingWorkflowsMicro']
+        }
+    })
+
+    let pursuitAssessments = false;
+
+    $("#pursuitAssessments").on('click', function () {
+        if (!pursuitAssessments) {
+            pursuitAssessments = true
+            microNumberOfSelected += 1
+            $("#pursuitAssessments-circle").addClass('d-none')
+            $("#pursuitAssessments-check").removeClass('d-none')
+            selectedAnswers['pursuitAssessmentsMicro'] = 'Pursuit Assessments'
+        } else {
+            pursuitAssessments = false
+            microNumberOfSelected -= 1
+            $("#pursuitAssessments-circle").removeClass('d-none')
+            $("#pursuitAssessments-check").addClass('d-none')
+            delete selectedAnswers['pursuitAssessmentsMicro']
+        }
+    })
+
+    let processMaps = false;
+
+    $("#processMaps").on('click', function () {
+        if (!processMaps) {
+            processMaps = true
+            microNumberOfSelected += 1
+            $("#processMaps-circle").addClass('d-none')
+            $("#processMaps-check").removeClass('d-none')
+            selectedAnswers['processMapsMicro'] = 'MVP Catalog'
+        } else {
+            processMaps = false
+            microNumberOfSelected -= 1
+            $("#processMaps-circle").removeClass('d-none')
+            $("#processMaps-check").addClass('d-none')
+            delete selectedAnswers['processMapsMicro']
+        }
+    })
+
+    let customerCostCalculators = false;
+
+    $("#customerCostCalculators").on('click', function () {
+        if (!customerCostCalculators) {
+            customerCostCalculators = true
+            microNumberOfSelected += 1
+            $("#customerCostCalculators-circle").addClass('d-none')
+            $("#customerCostCalculators-check").removeClass('d-none')
+            selectedAnswers['customerCostCalculatorsMicro'] = 'Cost Calculators'
+        } else {
+            customerCostCalculators = false
+            microNumberOfSelected -= 1
+            $("#customerCostCalculators-circle").removeClass('d-none')
+            $("#customerCostCalculators-check").addClass('d-none')
+            delete selectedAnswers['customerCostCalculatorsMicro']
+        }
+    })
+
+    let standardOperationsProcedures = false;
+
+    $("#standardOperationsProcedures").on('click', function () {
+        if (!standardOperationsProcedures) {
+            standardOperationsProcedures = true
+            microNumberOfSelected += 1
+            $("#standardOperationsProcedures-circle").addClass('d-none')
+            $("#standardOperationsProcedures-check").removeClass('d-none')
+            selectedAnswers['standardOperationsProceduresMicro'] = 'Standard Operations Procedures'
+        } else {
+            standardOperationsProcedures = false
+            microNumberOfSelected -= 1
+            $("#standardOperationsProcedures-circle").removeClass('d-none')
+            $("#standardOperationsProcedures-check").addClass('d-none')
+            delete selectedAnswers['standardOperationsProceduresMicro']
+        }
+    })
+
+    let balanceSheetAnalysis = false;
+
+    $("#balanceSheetAnalysis").on('click', function () {
+        if (!balanceSheetAnalysis) {
+            balanceSheetAnalysis = true
+            microNumberOfSelected += 1
+            $("#balanceSheetAnalysis-circle").addClass('d-none')
+            $("#balanceSheetAnalysis-check").removeClass('d-none')
+            selectedAnswers['balanceSheetAnalysisMicro'] = 'Balance Sheet'
+        } else {
+            balanceSheetAnalysis = false
+            microNumberOfSelected -= 1
+            $("#balanceSheetAnalysis-circle").removeClass('d-none')
+            $("#balanceSheetAnalysis-check").addClass('d-none')
+            delete selectedAnswers['balanceSheetAnalysisMicro']
+        }
+    })
+
+    let cashflowAnalysis = false;
+
+    $("#cashflowAnalysis").on('click', function () {
+        if (!cashflowAnalysis) {
+            cashflowAnalysis = true
+            microNumberOfSelected += 1
+            $("#cashflowAnalysis-circle").addClass('d-none')
+            $("#cashflowAnalysis-check").removeClass('d-none')
+            selectedAnswers['cashflowAnalysisMicro'] = 'Cashflow Statement'
+        } else {
+            cashflowAnalysis = false
+            microNumberOfSelected -= 1
+            $("#cashflowAnalysis-circle").removeClass('d-none')
+            $("#cashflowAnalysis-check").addClass('d-none')
+            delete selectedAnswers['cashflowAnalysisMicro']
+        }
+    })
+
+    let incomeStatementAnalysis = false;
+
+    $("#incomeStatementAnalysis").on('click', function () {
+        if (!incomeStatementAnalysis) {
+            incomeStatementAnalysis = true
+            microNumberOfSelected += 1
+            $("#incomeStatementAnalysis-circle").addClass('d-none')
+            $("#incomeStatementAnalysis-check").removeClass('d-none')
+            selectedAnswers['incomeStatementAnalysisMicro'] = 'Income Statement'
+        } else {
+            cashflowAnalysis = false
+            microNumberOfSelected -= 1
+            $("#incomeStatementAnalysis-circle").removeClass('d-none')
+            $("#incomeStatementAnalysis-check").addClass('d-none')
+            delete selectedAnswers['incomeStatementAnalysisMicro']
+        }
+    })
+
+    let serviceOfferingSystems = false;
+
+    $("#serviceOfferingSystems").on('click', function () {
+        if (!serviceOfferingSystems) {
+            serviceOfferingSystems = true
+            microNumberOfSelected += 1
+            $("#serviceOfferingSystems-circle").addClass('d-none')
+            $("#serviceOfferingSystems-check").removeClass('d-none')
+            selectedAnswers['serviceOfferingSystemsMicro'] = 'Menu of Services'
+        } else {
+            serviceOfferingSystems = false
+            microNumberOfSelected -= 1
+            $("#serviceOfferingSystems-circle").removeClass('d-none')
+            $("#serviceOfferingSystems-check").addClass('d-none')
+            delete selectedAnswers['serviceOfferingSystemsMicro']
+        }
+    })
+    // SELECT ALL GROUPS - SMALL
+
+    let raciModels = false;
+
+    $("#raciModels").on('click', function () {
+        if (!raciModels) {
+            raciModels = true
+            smallNumberOfSelected += 1
+            $("#raciModels-circle").addClass('d-none')
+            $("#raciModels-check").removeClass('d-none')
+            selectedAnswers['raciModelsSmall'] = 'R.A.C.I. Models '
+        } else {
+            raciModels = false
+            smallNumberOfSelected -= 1
+            $("#raciModels-circle").removeClass('d-none')
+            $("#raciModels-check").addClass('d-none')
+            delete selectedAnswers['raciModelsSmall']
+        }
+    })
+
+    let sipoc = false;
+
+    $("#sipoc").on('click', function () {
+        if (!sipoc) {
+            sipoc = true
+            smallNumberOfSelected += 1
+            $("#sipoc-circle").addClass('d-none')
+            $("#sipoc-check").removeClass('d-none')
+            selectedAnswers['sipocSmall'] = 'S.I.P.O.C.'
+        } else {
+            sipoc = false
+            smallNumberOfSelected -= 1
+            $("#sipoc-circle").removeClass('d-none')
+            $("#sipoc-check").addClass('d-none')
+            delete selectedAnswers['sipocSmall']
+        }
+    })
+
+    let onBoardingChecklists = false;
+
+    $("#onBoardingChecklists").on('click', function () {
+        if (!onBoardingChecklists) {
+            onBoardingChecklists = true
+            smallNumberOfSelected += 1
+            $("#onBoardingChecklists-circle").addClass('d-none')
+            $("#onBoardingChecklists-check").removeClass('d-none')
+            selectedAnswers['onBoardingChecklistsSmall'] = 'On-boarding Prehire Checklists'
+        } else {
+            onBoardingChecklists = false
+            smallNumberOfSelected -= 1
+            $("#onBoardingChecklists-circle").removeClass('d-none')
+            $("#onBoardingChecklists-check").addClass('d-none')
+            delete selectedAnswers['onBoardingChecklistsSmall']
+        }
+    })
+
+    let kpiClarityWorksheets = false;
+
+    $("#kpiClarityWorksheets").on('click', function () {
+        if (!kpiClarityWorksheets) {
+            kpiClarityWorksheets = true
+            smallNumberOfSelected += 1
+            $("#kpiClarityWorksheets-circle").addClass('d-none')
+            $("#kpiClarityWorksheets-check").removeClass('d-none')
+            selectedAnswers['kpiClarityWorksheetsSmall'] = 'KPI/Metric Objectives'
+        } else {
+            kpiClarityWorksheets = false
+            smallNumberOfSelected -= 1
+            $("#kpiClarityWorksheets-circle").removeClass('d-none')
+            $("#kpiClarityWorksheets-check").addClass('d-none')
+            delete selectedAnswers['kpiClarityWorksheetsSmall']
+        }
+    })
+
+    let turnoverAnalysis = false;
+
+    $("#turnoverAnalysis").on('click', function () {
+        if (!turnoverAnalysis) {
+            turnoverAnalysis = true
+            smallNumberOfSelected += 1
+            $("#turnoverAnalysis-circle").addClass('d-none')
+            $("#turnoverAnalysis-check").removeClass('d-none')
+            selectedAnswers['turnoverAnalysisSmall'] = 'Turnover Calculators'
+        } else {
+            turnoverAnalysis = false
+            smallNumberOfSelected -= 1
+            $("#turnoverAnalysis-circle").removeClass('d-none')
+            $("#turnoverAnalysis-check").addClass('d-none')
+            delete selectedAnswers['turnoverAnalysisSmall']
+        }
+    })
+
+    let hiringProcessImprovements = false;
+
+    $("#hiringProcessImprovements").on('click', function () {
+        if (!hiringProcessImprovements) {
+            hiringProcessImprovements = true
+            smallNumberOfSelected += 1
+            $("#hiringProcessImprovements-circle").addClass('d-none')
+            $("#hiringProcessImprovements-check").removeClass('d-none')
+            selectedAnswers['hiringProcessImprovementsSmall'] = 'Process Maps/ Workflows'
+        } else {
+            hiringProcessImprovements = false
+            smallNumberOfSelected -= 1
+            $("#hiringProcessImprovements-circle").removeClass('d-none')
+            $("#hiringProcessImprovements-check").addClass('d-none')
+            delete selectedAnswers['hiringProcessImprovementsSmall']
+
+        }
+    })
+
+    let salesCycleCreation = false;
+
+    $("#salesCycleCreation").on('click', function () {
+        if (!salesCycleCreation) {
+            salesCycleCreation = true
+            smallNumberOfSelected += 1
+            $("#salesCycleCreation-circle").addClass('d-none')
+            $("#salesCycleCreation-check").removeClass('d-none')
+            selectedAnswers['salesCycleCreationSmall'] = 'Sales Cycle/CRM'
+        } else {
+            salesCycleCreation = false
+            smallNumberOfSelected -= 1
+            $("#salesCycleCreation-circle").removeClass('d-none')
+            $("#salesCycleCreation-check").addClass('d-none')
+            delete selectedAnswers['salesCycleCreationSmall']
+        }
+    })
+
+    let roiRetention = false;
+
+    $("#roiRetention").on('click', function () {
+        if (!roiRetention) {
+            roiRetention = true
+            smallNumberOfSelected += 1
+            $("#roiRetention-circle").addClass('d-none')
+            $("#roiRetention-check").removeClass('d-none')
+            selectedAnswers['roiRetentionSmall'] = 'ROI Calculators'
+        } else {
+            roiRetention = false
+            smallNumberOfSelected -= 1
+            $("#roiRetention-circle").removeClass('d-none')
+            $("#roiRetention-check").addClass('d-none')
+            delete selectedAnswers['roiRetentionSmall']
+        }
+    })
+
+    let rulesOfCommunication = false;
+
+    $("#rulesOfCommunication").on('click', function () {
+        if (!rulesOfCommunication) {
+            rulesOfCommunication = true
+            smallNumberOfSelected += 1
+            $("#rulesOfCommunication-circle").addClass('d-none')
+            $("#rulesOfCommunication-check").removeClass('d-none')
+            selectedAnswers['rulesOfCommunicationSmall'] = 'Rules of Communication'
+        } else {
+            rulesOfCommunication = false
+            smallNumberOfSelected -= 1
+            $("#rulesOfCommunication-circle").removeClass('d-none')
+            $("#rulesOfCommunication-check").addClass('d-none')
+            delete selectedAnswers['rulesOfCommunicationSmall']
+        }
+    })
+
+    let newEmployeeProvisioning = false;
+
+    $("#newEmployeeProvisioning").on('click', function () {
+        if (!newEmployeeProvisioning) {
+            newEmployeeProvisioning = true
+            smallNumberOfSelected += 1
+            $("#newEmployeeProvisioning-circle").addClass('d-none')
+            $("#newEmployeeProvisioning-check").removeClass('d-none')
+            selectedAnswers['newEmployeeProvisioningSmall'] = 'New Employee Provisioning'
+        } else {
+            newEmployeeProvisioning = false
+            smallNumberOfSelected -= 1
+            $("#newEmployeeProvisioning-circle").removeClass('d-none')
+            $("#newEmployeeProvisioning-check").addClass('d-none')
+            delete selectedAnswers['newEmployeeProvisioningSmall']
+        }
+    })
+
+    let depProductionScoreCards = false;
+
+    $("#depProductionScoreCards").on('click', function () {
+        if (!depProductionScoreCards) {
+            depProductionScoreCards = true
+            smallNumberOfSelected += 1
+            $("#depProductionScoreCards-circle").addClass('d-none')
+            $("#depProductionScoreCards-check").removeClass('d-none')
+            selectedAnswers['depProductionScoreCardsSmall'] = 'Production Score Cards'
+        } else {
+            depProductionScoreCards = false
+            smallNumberOfSelected -= 1
+            $("#depProductionScoreCards-circle").removeClass('d-none')
+            $("#depProductionScoreCards-check").addClass('d-none')
+            delete selectedAnswers['depProductionScoreCardsSmall']
+        }
+    })
+
+    let prehireChecklist = false;
+
+    $("#prehireChecklist").on('click', function () {
+        if (!prehireChecklist) {
+            prehireChecklist = true
+            smallNumberOfSelected += 1
+            $("#prehireChecklist-circle").addClass('d-none')
+            $("#prehireChecklist-check").removeClass('d-none')
+            selectedAnswers['prehireChecklistSmall'] = 'Pursuit Assesment'
+        } else {
+            prehireChecklist = false
+            smallNumberOfSelected -= 1
+            $("#prehireChecklist-circle").removeClass('d-none')
+            $("#prehireChecklist-check").addClass('d-none')
+            delete selectedAnswers['prehireChecklistSmall']
+        }
+    })
+
+    let contingencyPlans = false;
+
+    $("#contingencyPlans").on('click', function () {
+        if (!contingencyPlans) {
+            contingencyPlans = true
+            smallNumberOfSelected += 1
+            $("#contingencyPlans-circle").addClass('d-none')
+            $("#contingencyPlans-check").removeClass('d-none')
+            selectedAnswers['contingencyPlansSmall'] = 'Contingency Plans'
+        } else {
+            contingencyPlans = false
+            smallNumberOfSelected -= 1
+            $("#contingencyPlans-circle").removeClass('d-none')
+            $("#contingencyPlans-check").addClass('d-none')
+            delete selectedAnswers['contingencyPlansSmall']
+        }
+    })
+
+    let cleanReportingWorksheets = false;
+
+    $("#cleanReportingWorksheets").on('click', function () {
+        if (!cleanReportingWorksheets) {
+            cleanReportingWorksheets = true
+            smallNumberOfSelected += 1
+            $("#cleanReportingWorksheets-circle").addClass('d-none')
+            $("#cleanReportingWorksheets-check").removeClass('d-none')
+            selectedAnswers['cleanReportingWorksheetsSmall'] = 'Clean Reporting Worksheets'
+        } else {
+            cleanReportingWorksheets = false
+            smallNumberOfSelected -= 1
+            $("#cleanReportingWorksheets-circle").removeClass('d-none')
+            $("#cleanReportingWorksheets-check").addClass('d-none')
+            delete selectedAnswers['cleanReportingWorksheetsSmall']
+        }
+    })
+
+    let customerJourneyMaps = false;
+
+    $("#customerJourneyMaps").on('click', function () {
+        if (!customerJourneyMaps) {
+            customerJourneyMaps = true
+            smallNumberOfSelected += 1
+            $("#customerJourneyMaps-circle").addClass('d-none')
+            $("#customerJourneyMaps-check").removeClass('d-none')
+            selectedAnswers['customerJourneyMapsSmall'] = 'Customer Journey Maps'
+        } else {
+            customerJourneyMaps = false
+            smallNumberOfSelected -= 1
+            $("#customerJourneyMaps-circle").removeClass('d-none')
+            $("#customerJourneyMaps-check").addClass('d-none')
+            delete selectedAnswers['customerJourneyMapsSmall']
+        }
+    })
+
+    let financialStatements = false;
+
+    $("#financialStatements").on('click', function () {
+        if (!financialStatements) {
+            financialStatements = true
+            smallNumberOfSelected += 1
+            $("#financialStatements-circle").addClass('d-none')
+            $("#financialStatements-check").removeClass('d-none')
+            selectedAnswers['financialStatementsSmall'] = 'Financial Statements'
+        } else {
+            financialStatements = false
+            smallNumberOfSelected -= 1
+            $("#financialStatements-circle").removeClass('d-none')
+            $("#financialStatements-check").addClass('d-none')
+            delete selectedAnswers['financialStatementsSmall']
+        }
+    })
+
+    // SELECT ALL GROUPS - MED
+
+    let projectManagementMethodology = false;
+
+    $("#projectManagementMethodology").on('click', function () {
+        if (!projectManagementMethodology) {
+            projectManagementMethodology = true
+            medNumberOfSelected += 1
+            $("#projectManagementMethodology-circle").addClass('d-none')
+            $("#projectManagementMethodology-check").removeClass('d-none')
+            selectedAnswers['projectManagementMethodologyMed'] = 'Project Management Methodology'
+        } else {
+            projectManagementMethodology = false
+            medNumberOfSelected -= 1
+            $("#projectManagementMethodology-circle").removeClass('d-none')
+            $("#projectManagementMethodology-check").addClass('d-none')
+            delete selectedAnswers['projectManagementMethodologyMed']
+        }
+    })
+
+    let changeManagementPlans = false;
+
+    $("#changeManagementPlans").on('click', function () {
+        if (!changeManagementPlans) {
+            changeManagementPlans = true
+            medNumberOfSelected += 1
+            $("#changeManagementPlans-circle").addClass('d-none')
+            $("#changeManagementPlans-check").removeClass('d-none')
+            selectedAnswers['changeManagementPlansMed'] = 'Change Management Plans'
+        } else {
+            changeManagementPlans = false
+            medNumberOfSelected -= 1
+            $("#changeManagementPlans-circle").removeClass('d-none')
+            $("#changeManagementPlans-check").addClass('d-none')
+            delete selectedAnswers['changeManagementPlansMed']
+        }
+    })
+
+    let dataSystemsAnalysis = false;
+
+    $("#dataSystemsAnalysis").on('click', function () {
+        if (!dataSystemsAnalysis) {
+            dataSystemsAnalysis = true
+            medNumberOfSelected += 1
+            $("#dataSystemsAnalysis-circle").addClass('d-none')
+            $("#dataSystemsAnalysis-check").removeClass('d-none')
+            selectedAnswers['dataSystemsAnalysisMed'] = 'Data Systems Analysis'
+        } else {
+            dataSystemsAnalysis
+            medNumberOfSelected -= 1
+            $("#dataSystemsAnalysis-circle").removeClass('d-none')
+            $("#dataSystemsAnalysis-check").addClass('d-none')
+            delete selectedAnswers['dataSystemsAnalysisMed']
+        }
+    })
+
+    let productiveMeetingsTrainings = false;
+
+    $("#productiveMeetingsTrainings").on('click', function () {
+        if (!productiveMeetingsTrainings) {
+            productiveMeetingsTrainings = true
+            medNumberOfSelected += 1
+            $("#productiveMeetingsTrainings-circle").addClass('d-none')
+            $("#productiveMeetingsTrainings-check").removeClass('d-none')
+            selectedAnswers['productiveMeetingsTrainingsSmall'] = 'Productive Meetings Trainings'
+        } else {
+            productiveMeetingsTrainings = false
+            medNumberOfSelected -= 1
+            $("#productiveMeetingsTrainings-circle").removeClass('d-none')
+            $("#productiveMeetingsTrainings-check").addClass('d-none')
+            delete selectedAnswers['productiveMeetingsTrainingsSmall']
+        }
+    })
+
+    let leadershipDevelopment = false;
+
+    $("#leadershipDevelopment").on('click', function () {
+        if (!leadershipDevelopment) {
+            leadershipDevelopment = true
+            medNumberOfSelected += 1
+            $("#leadershipDevelopment-circle").addClass('d-none')
+            $("#leadershipDevelopment-check").removeClass('d-none')
+            selectedAnswers['leadershipDevelopmentSmall'] = 'Leadership Development'
+        } else {
+            leadershipDevelopment = false
+            medNumberOfSelected -= 1
+            $("#leadershipDevelopment-circle").removeClass('d-none')
+            $("#leadershipDevelopment-check").addClass('d-none')
+            delete selectedAnswers['leadershipDevelopmentSmall']
+        }
+    })
+
+    let sipocMed = false;
+
+    $("#sipocMed").on('click', function () {
+        if (!sipocMed) {
+            sipocMed = true
+            medNumberOfSelected += 1
+            $("#sipocMed-circle").addClass('d-none')
+            $("#sipocMed-check").removeClass('d-none')
+            selectedAnswers['sipocMed'] = 'S.I.P.O.C.'
+        } else {
+            sipocMed = false
+            medNumberOfSelected -= 1
+            $("#sipocMed-circle").removeClass('d-none')
+            $("#sipocMed-check").addClass('d-none')
+            delete selectedAnswers['sipocMed']
+        }
+    })
+
+    let careerLaddersSuccessionPlanning = false;
+
+    $("#careerLaddersSuccessionPlanning").on('click', function () {
+        if (!careerLaddersSuccessionPlanning) {
+            careerLaddersSuccessionPlanning = true
+            medNumberOfSelected += 1
+            $("#careerLaddersSuccessionPlanning-circle").addClass('d-none')
+            $("#careerLaddersSuccessionPlanning-check").removeClass('d-none')
+            selectedAnswers['careerLaddersSuccessionPlanningMed'] = 'Career Ladders / Succession Planning'
+        } else {
+            careerLaddersSuccessionPlanning = false
+            medNumberOfSelected -= 1
+            $("#careerLaddersSuccessionPlanning-circle").removeClass('d-none')
+            $("#careerLaddersSuccessionPlanning-check").addClass('d-none')
+            delete selectedAnswers['careerLaddersSuccessionPlanningMed']
+        }
+    })
+
+    let talentBehaviorAssessments = false;
+
+    $("#talentBehaviorAssessments").on('click', function () {
+        if (!talentBehaviorAssessments) {
+            talentBehaviorAssessments = true
+            medNumberOfSelected += 1
+            $("#talentBehaviorAssessments-circle").addClass('d-none')
+            $("#talentBehaviorAssessments-check").removeClass('d-none')
+            selectedAnswers['talentBehaviorAssessmentsMed'] = 'Talent Behavior Assessments'
+        } else {
+            talentBehaviorAssessments = false
+            medNumberOfSelected -= 1
+            $("#talentBehaviorAssessments-circle").removeClass('d-none')
+            $("#talentBehaviorAssessments-check").addClass('d-none')
+            delete selectedAnswers['talentBehaviorAssessmentsMed']
+        }
+    })
+
+    let payStructures = false;
+
+    $("#payStructures").on('click', function () {
+        if (!payStructures) {
+            payStructures = true
+            medNumberOfSelected += 1
+            $("#payStructures-circle").addClass('d-none')
+            $("#payStructures-check").removeClass('d-none')
+            selectedAnswers['payStructuresMed'] = 'Pay Structure Benchmarking'
+        } else {
+            payStructures = false
+            medNumberOfSelected -= 1
+            $("#payStructures-circle").removeClass('d-none')
+            $("#payStructures-check").addClass('d-none')
+            delete selectedAnswers['payStructuresMed']
+        }
+    })
+
+    let processMapsMed = false;
+
+    $("#processMapsMed").on('click', function () {
+        if (!processMapsMed) {
+            processMapsMed = true
+            medNumberOfSelected += 1
+            $("#processMapsMed-circle").addClass('d-none')
+            $("#processMapsMed-check").removeClass('d-none')
+            selectedAnswers['processMapsMed'] = 'Process Maps/ Workflows'
+        } else {
+            processMapsMed = false
+            medNumberOfSelected -= 1
+            $("#processMapsMed-circle").removeClass('d-none')
+            $("#processMapsMed-check").addClass('d-none')
+            delete selectedAnswers['processMapsMed']
+        }
+    })
+
+    let communicationRulesMed = false;
+
+    $("#communicationRulesMed").on('click', function () {
+        if (!communicationRulesMed) {
+            communicationRulesMed = true
+            medNumberOfSelected += 1
+            $("#communicationRulesMed-circle").addClass('d-none')
+            $("#communicationRulesMed-check").removeClass('d-none')
+            selectedAnswers['communicationRulesMed'] = 'Rules of Communication'
+        } else {
+            communicationRulesMed = false
+            medNumberOfSelected -= 1
+            $("#communicationRulesMed-circle").removeClass('d-none')
+            $("#communicationRulesMed-check").addClass('d-none')
+            delete selectedAnswers['communicationRulesMed']
+        }
+    })
+
+    let customerJourneyMapsMed = false;
+
+    $("#customerJourneyMapsMed").on('click', function () {
+        if (!customerJourneyMapsMed) {
+            customerJourneyMapsMed = true
+            medNumberOfSelected += 1
+            $("#customerJourneyMapsMed-circle").addClass('d-none')
+            $("#customerJourneyMapsMed-check").removeClass('d-none')
+            selectedAnswers['customerJourneyMapsMed'] = 'Customer Journey Maps'
+        } else {
+            customerJourneyMapsMed = false
+            medNumberOfSelected -= 1
+            $("#customerJourneyMapsMed-circle").removeClass('d-none')
+            $("#customerJourneyMapsMed-check").addClass('d-none')
+            delete selectedAnswers['customerJourneyMapsMed']
+        }
+    })
+
+    let roiCalculatorsMed = false;
+
+    $("#roiCalculatorsMed").on('click', function () {
+        if (!roiCalculatorsMed) {
+            roiCalculatorsMed = true
+            medNumberOfSelected += 1
+            $("#roiCalculatorsMed-circle").addClass('d-none')
+            $("#roiCalculatorsMed-check").removeClass('d-none')
+            selectedAnswers['roiCalculatorsMed'] = 'ROI Calculators'
+        } else {
+            roiCalculatorsMed = false
+            medNumberOfSelected -= 1
+            $("#roiCalculatorsMed-circle").removeClass('d-none')
+            $("#roiCalculatorsMed-check").addClass('d-none')
+            delete selectedAnswers['roiCalculatorsMed']
+        }
+    })
+
+    let productionScoreCardsMed = false;
+
+    $("#productionScoreCardsMed").on('click', function () {
+        if (!productionScoreCardsMed) {
+            productionScoreCardsMed = true
+            medNumberOfSelected += 1
+            $("#productionScoreCardsMed-circle").addClass('d-none')
+            $("#productionScoreCardsMed-check").removeClass('d-none')
+            selectedAnswers['productionScoreCardsMed'] = 'Production Score Cards'
+        } else {
+            productionScoreCardsMed = false
+            medNumberOfSelected -= 1
+            $("#productionScoreCardsMed-circle").removeClass('d-none')
+            $("#productionScoreCardsMed-check").addClass('d-none')
+            delete selectedAnswers['productionScoreCardsMed']
+        }
+    })
+
+    let salesCycleCrmMed = false;
+
+    $("#salesCycleCrmMed").on('click', function () {
+        if (!salesCycleCrmMed) {
+            salesCycleCrmMed = true
+            medNumberOfSelected += 1
+            $("#salesCycleCrmMed-circle").addClass('d-none')
+            $("#salesCycleCrmMed-check").removeClass('d-none')
+            selectedAnswers['salesCycleCrmMed'] = 'Sales Cycle / CRM'
+        } else {
+            salesCycleCrmMed = false
+            medNumberOfSelected -= 1
+            $("#salesCycleCrmMed-circle").removeClass('d-none')
+            $("#salesCycleCrmMed-check").addClass('d-none')
+            delete selectedAnswers['salesCycleCrmMed']
+        }
+    })
+
+    let pursuitAssessmentsMed = false;
+
+    $("#pursuitAssessmentsMed").on('click', function () {
+        if (!pursuitAssessmentsMed) {
+            pursuitAssessmentsMed = true
+            medNumberOfSelected += 1
+            $("#pursuitAssessmentsMed-circle").addClass('d-none')
+            $("#pursuitAssessmentsMed-check").removeClass('d-none')
+            selectedAnswers['pursuitAssessmentsMed'] = 'Pursuit Assessment'
+        } else {
+            pursuitAssessmentsMed = false
+            medNumberOfSelected -= 1
+            $("#pursuitAssessmentsMed-circle").removeClass('d-none')
+            $("#pursuitAssessmentsMed-check").addClass('d-none')
+            delete selectedAnswers['pursuitAssessmentsMed']
+        }
+    })
+
+
+    // SELECT ALL GROUPS - LARGE
+
+    let workingCapitalFundingGap = false;
+
+    $("#workingCapitalFundingGap").on('click', function () {
+        if (!workingCapitalFundingGap) {
+            workingCapitalFundingGap = true
+            largeNumberOfSelected += 1
+            $("#workingCapitalFundingGap-circle").addClass('d-none')
+            $("#workingCapitalFundingGap-check").removeClass('d-none')
+            selectedAnswers['workingCapitalFundingGapLarge'] = 'Working Capital Funding Gap'
+        } else {
+            workingCapitalFundingGap
+            largeNumberOfSelected -= 1
+            $("#workingCapitalFundingGap-circle").removeClass('d-none')
+            $("#workingCapitalFundingGap-check").addClass('d-none')
+            delete selectedAnswers['workingCapitalFundingGapLarge']
+        }
+    })
+
+    let speedOfExecutionAnalysis = false;
+
+    $("#speedOfExecutionAnalysis").on('click', function () {
+        if (!speedOfExecutionAnalysis) {
+            speedOfExecutionAnalysis = true
+            largeNumberOfSelected += 1
+            $("#speedOfExecutionAnalysis-circle").addClass('d-none')
+            $("#speedOfExecutionAnalysis-check").removeClass('d-none')
+            selectedAnswers['speedOfExecutionAnalysisLarge'] = 'Speed Of Execution Analysis'
+        } else {
+            speedOfExecutionAnalysis = false
+            largeNumberOfSelected -= 1
+            $("#speedOfExecutionAnalysis-circle").removeClass('d-none')
+            $("#speedOfExecutionAnalysis-check").addClass('d-none')
+            delete selectedAnswers['speedOfExecutionAnalysisLarge']
+        }
+    })
+
+    let dupontAnalysis = false;
+
+    $("#dupontAnalysis").on('click', function () {
+        if (!dupontAnalysis) {
+            dupontAnalysis = true
+            largeNumberOfSelected += 1
+            $("#dupontAnalysis-circle").addClass('d-none')
+            $("#dupontAnalysis-check").removeClass('d-none')
+            selectedAnswers['dupontAnalysisLarge'] = 'Dupont Analysis'
+        } else {
+            dupontAnalysis = false
+            largeNumberOfSelected -= 1
+            $("#dupontAnalysis-circle").removeClass('d-none')
+            $("#dupontAnalysis-check").addClass('d-none')
+            delete selectedAnswers['dupontAnalysisLarge']
+        }
+    })
+
+    let roeLeversCalculators = false;
+
+    $("#roeLeversCalculators").on('click', function () {
+        if (!roeLeversCalculators) {
+            roeLeversCalculators = true
+            largeNumberOfSelected += 1
+            $("#roeLeversCalculators-circle").addClass('d-none')
+            $("#roeLeversCalculators-check").removeClass('d-none')
+            selectedAnswers['roeLeversCalculatorsLarge'] = 'ROE Levers Calculators'
+        } else {
+            roeLeversCalculators = false
+            largeNumberOfSelected -= 1
+            $("#roeLeversCalculators-circle").removeClass('d-none')
+            $("#roeLeversCalculators-check").addClass('d-none')
+            delete selectedAnswers['roeLeversCalculatorsLarge']
+        }
+    })
+
+    let orgainizationalRestructures = false;
+
+    $("#orgainizationalRestructures").on('click', function () {
+        if (!orgainizationalRestructures) {
+            orgainizationalRestructures = true
+            largeNumberOfSelected += 1
+            $("#orgainizationalRestructures-circle").addClass('d-none')
+            $("#orgainizationalRestructures-check").removeClass('d-none')
+            selectedAnswers['orgainizationalRestructuresLarge'] = 'Orgainizational Restructure Assesments'
+        } else {
+            orgainizationalRestructures = false
+            largeNumberOfSelected -= 1
+            $("#orgainizationalRestructures-circle").removeClass('d-none')
+            $("#orgainizationalRestructures-check").addClass('d-none')
+            delete selectedAnswers['orgainizationalRestructuresLarge']
+        }
+    })
+
+    let lmsSetupsDevelopment = false;
+
+    $("#lmsSetupsDevelopment").on('click', function () {
+        if (!lmsSetupsDevelopment) {
+            lmsSetupsDevelopment = true
+            largeNumberOfSelected += 1
+            $("#lmsSetupsDevelopment-circle").addClass('d-none')
+            $("#lmsSetupsDevelopment-check").removeClass('d-none')
+            selectedAnswers['lmsSetupsDevelopmentLarge'] = 'LMS Setups / Development'
+        } else {
+            lmsSetupsDevelopment = false
+            largeNumberOfSelected -= 1
+            $("#lmsSetupsDevelopment-circle").removeClass('d-none')
+            $("#lmsSetupsDevelopment-check").addClass('d-none')
+            delete selectedAnswers['lmsSetupsDevelopmentLarge']
+        }
+    })
+
+    let orientationProcessImprovement = false;
+
+    $("#orientationProcessImprovement").on('click', function () {
+        if (!orientationProcessImprovement) {
+            orientationProcessImprovement = true
+            largeNumberOfSelected += 1
+            $("#orientationProcessImprovement-circle").addClass('d-none')
+            $("#orientationProcessImprovement-check").removeClass('d-none')
+            selectedAnswers['orientationProcessImprovementLarge'] = 'Orientation Process Improvement'
+        } else {
+            orientationProcessImprovement = false
+            largeNumberOfSelected -= 1
+            $("#orientationProcessImprovement-circle").removeClass('d-none')
+            $("#orientationProcessImprovement-check").addClass('d-none')
+            delete selectedAnswers['orientationProcessImprovementLarge']
+        }
+    })
+
+    let projectManagementMethodologyLarge = false;
+
+    $("#projectManagementMethodologyLarge").on('click', function () {
+        if (!projectManagementMethodologyLarge) {
+            projectManagementMethodologyLarge = true
+            largeNumberOfSelected += 1
+            $("#projectManagementMethodologyLarge-circle").addClass('d-none')
+            $("#projectManagementMethodologyLarge-check").removeClass('d-none')
+            selectedAnswers['projectManagementMethodologyLarge'] = 'Project Management Methodology'
+        } else {
+            projectManagementMethodologyLarge = false
+            largeNumberOfSelected -= 1
+            $("#projectManagementMethodologyLarge-circle").removeClass('d-none')
+            $("#projectManagementMethodologyLarge-check").addClass('d-none')
+            delete selectedAnswers['projectManagementMethodologyLarge']
+        }
+    })
+
+    let leadershipDevelopmentLarge = false;
+
+    $("#leadershipDevelopmentLarge").on('click', function () {
+        if (!leadershipDevelopmentLarge) {
+            leadershipDevelopmentLarge = true
+            largeNumberOfSelected += 1
+            $("#leadershipDevelopmentLarge-circle").addClass('d-none')
+            $("#leadershipDevelopmentLarge-check").removeClass('d-none')
+            selectedAnswers['leadershipDevelopmentLarge'] = 'Leadership Development'
+        } else {
+            leadershipDevelopmentLarge = false
+            largeNumberOfSelected -= 1
+            $("#leadershipDevelopmentLarge-circle").removeClass('d-none')
+            $("#leadershipDevelopmentLarge-check").addClass('d-none')
+            delete selectedAnswers['leadershipDevelopmentLarge']
+        }
+    })
+
+    let sipocLarge = false;
+
+    $("#sipocLarge").on('click', function () {
+        if (!sipocLarge) {
+            sipocLarge = true
+            largeNumberOfSelected += 1
+            $("#sipocLarge-circle").addClass('d-none')
+            $("#sipocLarge-check").removeClass('d-none')
+            selectedAnswers['sipocLarge'] = 'S.I.P.O.C.'
+        } else {
+            sipocLarge = false
+            largeNumberOfSelected -= 1
+            $("#sipocLarge-circle").removeClass('d-none')
+            $("#sipocLarge-check").addClass('d-none')
+            delete selectedAnswers['sipocLarge']
+        }
+    })
+
+    let dataSystemsAnalysisLarge = false;
+
+    $("#dataSystemsAnalysisLarge").on('click', function () {
+        if (!dataSystemsAnalysisLarge) {
+            dataSystemsAnalysisLarge = true
+            largeNumberOfSelected += 1
+            $("#dataSystemsAnalysisLarge-circle").addClass('d-none')
+            $("#dataSystemsAnalysisLarge-check").removeClass('d-none')
+            selectedAnswers['dataSystemsAnalysisLarge'] = 'Data System Analysis'
+        } else {
+            dataSystemsAnalysisLarge = false
+            largeNumberOfSelected -= 1
+            $("#dataSystemsAnalysisLarge-circle").removeClass('d-none')
+            $("#dataSystemsAnalysisLarge-check").addClass('d-none')
+            delete selectedAnswers['dataSystemsAnalysisLarge']
+        }
+    })
+
+    let careerLaddersSuccessionPlanningLarge = false;
+
+    $("#careerLaddersSuccessionPlanningLarge").on('click', function () {
+        if (!careerLaddersSuccessionPlanningLarge) {
+            careerLaddersSuccessionPlanningLarge = true
+            largeNumberOfSelected += 1
+            $("#careerLaddersSuccessionPlanningLarge-circle").addClass('d-none')
+            $("#careerLaddersSuccessionPlanningLarge-check").removeClass('d-none')
+            selectedAnswers['careerLaddersSuccessionPlanningLarge'] = 'Career Ladders Succession Planning'
+        } else {
+            careerLaddersSuccessionPlanningLarge = false
+            largeNumberOfSelected -= 1
+            $("#careerLaddersSuccessionPlanningLarge-circle").removeClass('d-none')
+            $("#careerLaddersSuccessionPlanningLarge-check").addClass('d-none')
+            delete selectedAnswers['careerLaddersSuccessionPlanningLarge']
+        }
+    })
+
+    let changeManagementPlansLarge = false;
+
+    $("#changeManagementPlansLarge").on('click', function () {
+        if (!changeManagementPlansLarge) {
+            changeManagementPlansLarge = true
+            largeNumberOfSelected += 1
+            $("#changeManagementPlansLarge-circle").addClass('d-none')
+            $("#changeManagementPlansLarge-check").removeClass('d-none')
+            selectedAnswers['changeManagementPlansLarge'] = 'Change Management Plans'
+        } else {
+            changeManagementPlansLarge = false
+            largeNumberOfSelected -= 1
+            $("#changeManagementPlansLarge-circle").removeClass('d-none')
+            $("#changeManagementPlansLarge-check").addClass('d-none')
+            delete selectedAnswers['changeManagementPlansLarge']
+        }
+    })
+
+    let payStructuresLarge = false;
+
+    $("#payStructuresLarge").on('click', function () {
+        if (!payStructuresLarge) {
+            payStructuresLarge = true
+            largeNumberOfSelected += 1
+            $("#payStructuresLarge-circle").addClass('d-none')
+            $("#payStructuresLarge-check").removeClass('d-none')
+            selectedAnswers['payStructuresLarge'] = 'Pay Structure Benchmarking'
+        } else {
+            payStructuresLarge = false
+            largeNumberOfSelected -= 1
+            $("#payStructuresLarge-circle").removeClass('d-none')
+            $("#payStructuresLarge-check").addClass('d-none')
+            delete selectedAnswers['payStructuresLarge']
+        }
+    })
+
+    let talentBehaviorAssessmentsLarge = false;
+
+    $("#talentBehaviorAssessmentsLarge").on('click', function () {
+        if (!talentBehaviorAssessmentsLarge) {
+            talentBehaviorAssessmentsLarge = true
+            largeNumberOfSelected += 1
+            $("#talentBehaviorAssessmentsLarge-circle").addClass('d-none')
+            $("#talentBehaviorAssessmentsLarge-check").removeClass('d-none')
+            selectedAnswers['talentBehaviorAssessmentsLarge'] = 'Talent Behavior Assessments'
+        } else {
+            talentBehaviorAssessmentsLarge = false
+            largeNumberOfSelected -= 1
+            $("#talentBehaviorAssessmentsLarge-circle").removeClass('d-none')
+            $("#talentBehaviorAssessmentsLarge-check").addClass('d-none')
+            delete selectedAnswers['talentBehaviorAssessmentsLarge']
+        }
+    })
+
+    let rulesOfCommunicationLarge = false;
+
+    $("#rulesOfCommunicationLarge").on('click', function () {
+        if (!rulesOfCommunicationLarge) {
+            rulesOfCommunicationLarge = true
+            largeNumberOfSelected += 1
+            $("#rulesOfCommunicationLarge-circle").addClass('d-none')
+            $("#rulesOfCommunicationLarge-check").removeClass('d-none')
+            selectedAnswers['rulesOfCommunicationLarge'] = 'Rules of Communication'
+        } else {
+            rulesOfCommunicationLarge = false
+            largeNumberOfSelected -= 1
+            $("#rulesOfCommunicationLarge-circle").removeClass('d-none')
+            $("#rulesOfCommunicationLarge-check").addClass('d-none')
+            delete selectedAnswers['rulesOfCommunicationLarge']
+        }
+    })
+    // END--------
+
+    // // assesment state
+    // let lastSelectedEmplyoee = "employees-1"
+    // let lastRevenueRange = "revenue-1"
+    // let lastYrsinBusiness = "yrsInBusiness-1"
+    // let lastSeniorLeaders = "seniorLeaders-1"
+    // let lastFrontlineManagment = "frontlineManagers-1"
+    // let lastDepartments = "departments-1"
+    // let lastTypeOfBusiness = "business-1"
+
+    // let assessmentAnswers = {
+    //     employees: "",
+    //     revenue: "",
+    //     typeOfBusiness: "",
+    //     yrsInBusiness: "",
+    //     seniorLeaders: "",
+    //     frontlineLeaders: "",
+    //     departments: ""
+    // };
 
     //employee func
     const selectEmployee = (el) => {
@@ -3795,69 +3945,80 @@
     $(".small-select-all-section").addClass('d-none')
 
     $(".med-select-all-section").addClass('d-none')
- 
+
     $(".large-select-all-section").addClass('d-none')
 
-   
+
     //ODG forms
     function percentage(partialValue, totalValue) {
         return (100 * partialValue) / totalValue;
-     } 
-
-    $('#submitLastStep').on('click', function () {    
-       $("#contactStep").removeClass('d-none')
-       document.querySelector('#contactStep').scrollIntoView({
-        behavior: 'smooth'
-    });
-
-    switch (assessmentAnswers.employees) {
-        case "1-4 employees":
-            if((100 - percentage(microNumberOfSelected, microNumberOfOptions)) < 29){
-                $("#changePercentage").attr('data-start-color', '#baefba')
-                $("#changePercentage").attr('data-end-color', '#118b11')
-            }
-            $("#changePercentage").attr('data-percent', 100 - percentage(microNumberOfSelected, microNumberOfOptions).toFixed(0));
-            $("#reportPercentage").html(100 - percentage(microNumberOfSelected, microNumberOfOptions).toFixed(0));
-            break;
-        case "5-200 employees":
-            if((100 - percentage(smallNumberOfSelected, smallNumberOfOptions)) < 29){
-                $("#changePercentage").attr('data-start-color', '#baefba')
-                $("#changePercentage").attr('data-end-color', '#118b11')
-            }
-            $("#changePercentage").attr('data-percent', 100 - percentage(smallNumberOfSelected, smallNumberOfOptions).toFixed(0));
-            $("#reportPercentage").html(100 - percentage(smallNumberOfSelected, smallNumberOfOptions).toFixed(0));
-            break;
-        case "201-1000 employees":
-            if((100 - percentage(medNumberOfSelected, medNumberOfOptions)) < 29){
-                $("#changePercentage").attr('data-start-color', '#baefba')
-                $("#changePercentage").attr('data-end-color', '#118b11')
-            }
-            $("#changePercentage").attr('data-percent', 100 - percentage(medNumberOfSelected, medNumberOfOptions).toFixed(0));
-            $("#reportPercentage").html(100 - percentage(medNumberOfSelected, medNumberOfOptions).toFixed(0));
-            break;
-        case "1001-2000 employees":
-            if((100 - percentage(largeNumberOfSelected, largeNumberOfOptions)) < 29){
-                $("#changePercentage").attr('data-start-color', '#baefba')
-                $("#changePercentage").attr('data-end-color', '#118b11')
-            }
-            $("#changePercentage").attr('data-percent', 100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0));
-            $("#reportPercentage").html(100 - percentage(largeNumberOfSelected, largeNumberOfOptions)).toFixed(0);
-            break;
-        case "2001+ employees":
-            if((100 - percentage(largeNumberOfSelected, largeNumberOfOptions)) < 29){
-                $("#changePercentage").attr('data-start-color', '#baefba')
-                $("#changePercentage").attr('data-end-color', '#118b11')
-            }
-            $("#changePercentage").attr('data-percent', 100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0));
-            $("#reportPercentage").html(100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0));
-            break;
-        default:
-            break;
     }
+
+    $('#submitLastStep').on('click', function () {
+        $("#contactStep").removeClass('d-none')
+        document.querySelector('#contactStep').scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        switch (assessmentAnswers.employees) {
+            case "1-4 employees":
+                if ((100 - percentage(microNumberOfSelected, microNumberOfOptions)) < 29) {
+                    $("#changePercentage").attr('data-start-color', '#baefba')
+                    $("#changePercentage").attr('data-end-color', '#118b11')
+                }
+                $("#changePercentage").attr('data-percent', 100 - percentage(microNumberOfSelected, microNumberOfOptions).toFixed(0));
+                $("#reportPercentage").html(100 - percentage(microNumberOfSelected, microNumberOfOptions).toFixed(0));
+                assessmentAnswers['businessCategory'] = 'micro business'
+                assessmentAnswers['score'] = `${microNumberOfSelected} out of ${microNumberOfOptions} options = ${(100 - percentage(microNumberOfSelected, microNumberOfOptions).toFixed(0))}% not being utilized.`
+                assessmentAnswers['selected'] = ['test', 'test2']
+                break;
+            case "5-200 employees":
+                if ((100 - percentage(smallNumberOfSelected, smallNumberOfOptions)) < 29) {
+                    $("#changePercentage").attr('data-start-color', '#baefba')
+                    $("#changePercentage").attr('data-end-color', '#118b11')
+                }
+                $("#changePercentage").attr('data-percent', 100 - percentage(smallNumberOfSelected, smallNumberOfOptions).toFixed(0));
+                $("#reportPercentage").html(100 - percentage(smallNumberOfSelected, smallNumberOfOptions).toFixed(0));
+                assessmentAnswers['businessCategory'] = 'small business'
+                assessmentAnswers['score'] = `${smallNumberOfSelected} out of ${smallNumberOfOptions} options = ${(100 - percentage(smallNumberOfSelected, smallNumberOfOptions).toFixed(0))}% not being utilized.`
+                break;
+            case "201-1000 employees":
+                if ((100 - percentage(medNumberOfSelected, medNumberOfOptions)) < 29) {
+                    $("#changePercentage").attr('data-start-color', '#baefba')
+                    $("#changePercentage").attr('data-end-color', '#118b11')
+                }
+                $("#changePercentage").attr('data-percent', 100 - percentage(medNumberOfSelected, medNumberOfOptions).toFixed(0));
+                $("#reportPercentage").html(100 - percentage(medNumberOfSelected, medNumberOfOptions).toFixed(0));
+                assessmentAnswers['businessCategory'] = 'medium business'
+                assessmentAnswers['score'] = `${medNumberOfSelected} out of ${medNumberOfOptions} options = ${(100 - percentage(medNumberOfSelected, medNumberOfOptions).toFixed(0))}% not being utilized.`
+                break;
+            case "1001-2000 employees":
+                if ((100 - percentage(largeNumberOfSelected, largeNumberOfOptions)) < 29) {
+                    $("#changePercentage").attr('data-start-color', '#baefba')
+                    $("#changePercentage").attr('data-end-color', '#118b11')
+                }
+                $("#changePercentage").attr('data-percent', 100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0));
+                $("#reportPercentage").html(100 - percentage(largeNumberOfSelected, largeNumberOfOptions)).toFixed(0);
+                assessmentAnswers['businessCategory'] = 'large business'
+                assessmentAnswers['score'] = `${largeNumberOfSelected} out of ${largeNumberOfOptions} options = ${(100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0))}% not being utilized.`
+                break;
+            case "2001+ employees":
+                if ((100 - percentage(largeNumberOfSelected, largeNumberOfOptions)) < 29) {
+                    $("#changePercentage").attr('data-start-color', '#baefba')
+                    $("#changePercentage").attr('data-end-color', '#118b11')
+                }
+                $("#changePercentage").attr('data-percent', 100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0));
+                $("#reportPercentage").html(100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0));
+                assessmentAnswers['businessCategory'] = 'large business'
+                assessmentAnswers['score'] = `${largeNumberOfSelected} out of ${largeNumberOfOptions} options = ${(100 - percentage(largeNumberOfSelected, largeNumberOfOptions).toFixed(0))}% not being utilized.`
+                break;
+            default:
+                break;
+        }
     })
 
     $("#onAssesmentSubmit").click(assessmentAnswers, () => {
-   
+
         if (
             assessmentAnswers.employees === "" ||
             assessmentAnswers.revenue === "" ||
@@ -3869,11 +4030,12 @@
         ) {
             alert("Please fill out entire form")
         } else {
+            selectedAnswers = {}
             $("#assesmentResults").removeClass('d-none')
             document.querySelector('#assesmentResults').scrollIntoView({
                 behavior: 'smooth'
             });
-    
+
             switch (assessmentAnswers.employees) {
                 case "1-4 employees":
                     $(".micro-select-all-section").removeClass('d-none')
@@ -3919,20 +4081,20 @@
         const seniorLeaders = $("#seniorLeaders").val()
         const frontlineLeaders = $("#frontlineLeaders").val()
         const departments = $("#departments").val()
-    
+
         if (
-          employees === "" ||
-          revenue === "" ||
-          typeOfBusiness === "" ||
-          yrsInBusiness === "" ||
-          seniorLeaders === "" ||
-          frontlineLeaders === "" ||
-          departments === ""
+            employees === "" ||
+            revenue === "" ||
+            typeOfBusiness === "" ||
+            yrsInBusiness === "" ||
+            seniorLeaders === "" ||
+            frontlineLeaders === "" ||
+            departments === ""
         ) {
-          alert("Please fill out entire form")
+            alert("Please fill out entire form")
         } else {
-            var assessmentAnswers = { 
-                "employees": employees, 
+            var assessmentAnswers = {
+                "employees": employees,
                 "revenue": revenue,
                 "typeOfBusiness": typeOfBusiness,
                 "yrsInBusiness": yrsInBusiness,
@@ -3941,28 +4103,28 @@
                 "departments": departments
             };
             localStorage.setItem('assessmentAnswers', JSON.stringify(assessmentAnswers))
-          switch (employees) {
-            case "1-4":
-                window.location.href = `./result-micro.html`
-              break
-            case "5-200":
-                window.location.href = `./result-sm.html`
-              break
-            case "201-1000":
-                window.location.href = `./result-med.html`
-              break
-            case "1001-2000":
-                window.location.href = `./result-lg.html`
-              break
-              case "2001+":
-                window.location.href = `./result-lg.html`
-              break
-    
-            default:
-              break
-          }
+            switch (employees) {
+                case "1-4":
+                    window.location.href = `./result-micro.html`
+                    break
+                case "5-200":
+                    window.location.href = `./result-sm.html`
+                    break
+                case "201-1000":
+                    window.location.href = `./result-med.html`
+                    break
+                case "1001-2000":
+                    window.location.href = `./result-lg.html`
+                    break
+                case "2001+":
+                    window.location.href = `./result-lg.html`
+                    break
+
+                default:
+                    break
+            }
         }
-      })
+    })
 
     $("#homePageContactFormSubmit").on("click", function () {
         const YourData = {
@@ -4078,13 +4240,18 @@
     })
 
     $("#sendMessageSubmit").on("click", function () {
-       
+
         const myData = assessmentAnswers
         myData["comapny"] = $("#compNameData").val();
         myData["zip"] = $("#compZipData").val();
         myData["meeting preference"] = $("#compSessionData").val();
         myData["email"] = $("#compEmailData").val();
+        let selectedOptions = 'Currently use: '
+        for (const [key, value] of Object.entries(selectedAnswers)) {
+            selectedOptions += `(${value}) `
 
+        }
+        myData['selected'] = selectedOptions
         if ($("#compNameData").val() === "") {
             alert("Please enter the company name inorder to submit the contact form")
             return
@@ -4092,7 +4259,8 @@
             alert("Please enter an email inorder to submit the contact form")
             return
         } else {
-            // console.log('eee', myData)
+
+            // console.log('data', myData)
             $("#sendMessageSubmit").addClass("loading")
             $.ajax({
                 url: "https://formspree.io/f/mrgjpbgv",
