@@ -4078,7 +4078,8 @@
     })
 
     $("#sendMessageSubmit").on("click", function () {
-        const myData = JSON.parse(assessmentAnswers)
+       
+        const myData = assessmentAnswers
         myData["comapny"] = $("#compNameData").val();
         myData["zip"] = $("#compZipData").val();
         myData["meeting preference"] = $("#compSessionData").val();
@@ -4091,6 +4092,7 @@
             alert("Please enter an email inorder to submit the contact form")
             return
         } else {
+            // console.log('eee', myData)
             $("#sendMessageSubmit").addClass("loading")
             $.ajax({
                 url: "https://formspree.io/f/mrgjpbgv",
