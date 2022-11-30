@@ -2934,7 +2934,7 @@
             smallNumberOfSelected += 1
             $("#prehireChecklist-circle").addClass('d-none')
             $("#prehireChecklist-check").removeClass('d-none')
-            selectedAnswers['prehireChecklistSmall'] = 'Pursuit Assesment'
+            selectedAnswers['prehireChecklistSmall'] = 'Pursuit Assessment'
         } else {
             prehireChecklist = false
             smallNumberOfSelected -= 1
@@ -3389,7 +3389,7 @@
             largeNumberOfSelected += 1
             $("#orgainizationalRestructures-circle").addClass('d-none')
             $("#orgainizationalRestructures-check").removeClass('d-none')
-            selectedAnswers['orgainizationalRestructuresLarge'] = 'Orgainizational Restructure Assesments'
+            selectedAnswers['orgainizationalRestructuresLarge'] = 'Orgainizational Restructure Assessments'
         } else {
             orgainizationalRestructures = false
             largeNumberOfSelected -= 1
